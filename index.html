@@ -3,200 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlockLoan & PeerLend</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <style>
-        body {
-            font-family: "Work Sans", "Noto Sans", sans-serif;
-        }
-    </style>
+    <title>PeerLend - Borrowing Options</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-[#f8fafb]">
-    <!-- BlockLoan Header -->
-    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8eef3] px-10 py-3">
-        <div class="flex items-center gap-4 text-[#0e151b]">
-            <div class="size-4">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
-                      fill="currentColor"
-                    ></path>
-                </svg>
-            </div>
-            <h2 class="text-[#0e151b] text-lg font-bold leading-tight tracking-[-0.015em]">BlockLoan</h2>
+<body class="bg-white">
+    <nav class="bg-white py-4 px-6 flex justify-between items-center border-b border-gray-200">
+        <div class="flex items-center">
+            <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" fill="#000000" />
+            </svg>
+            <span class="text-2xl font-bold">PeerLend</span>
         </div>
-        <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-                <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">How It Works</a>
-                <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Invest</a>
-                <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Borrow</a>
-                <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Log In</a>
-            </div>
-            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
-                <span class="truncate">Get Started</span>
-            </button>
+        <div class="space-x-6">
+            <a href="#" class="text-gray-600 hover:text-gray-900">Explore</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">Lend</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">Borrow</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">Learn</a>
         </div>
-    </header>
+        <div class="flex items-center space-x-4">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Create a project</button>
+            <img src="https://via.placeholder.com/32" alt="User avatar" class="w-8 h-8 rounded-full">
+        </div>
+    </nav>
 
-    <!-- Main Content -->
-    <main class="px-40 flex flex-1 justify-center py-5">
-        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <!-- Hero Section -->
-            <div class="@container">
-                <div class="@[480px]:p-4">
-                    <div
-                      class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
-                      style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/stability/d0de1d74-bad5-4b3f-9c26-efd7a0040939.png");'
-                    >
-                        <div class="flex flex-col gap-2 text-left">
-                            <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
-                                The future of finance
-                            </h1>
-                            <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                                BlockLoan is a decentralized platform that connects borrowers and investors. We offer low-cost, high-speed liquidity for a wide range of assets. Get started today.
-                            </h2>
-                        </div>
-                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
-                            <span class="truncate">Get Started</span>
-                        </button>
-                    </div>
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-2">Borrowing options</h1>
+        <p class="text-gray-600 mb-6">Browse opportunities to borrow from the community</p>
+        
+        <div class="bg-gray-100 rounded-lg p-4 mb-8 flex items-center">
+            <i class="fas fa-search text-gray-400 mr-2"></i>
+            <input type="text" placeholder="Search for a project" class="bg-transparent w-full outline-none">
+        </div>
+        
+        <div class="flex space-x-4 mb-8">
+            <button class="text-blue-500 border-b-2 border-blue-500 pb-2">All</button>
+            <button class="text-gray-600 hover:text-gray-900">Technology</button>
+            <button class="text-gray-600 hover:text-gray-900">Social Good</button>
+            <button class="text-gray-600 hover:text-gray-900">Small Business</button>
+        </div>
+        
+        <div class="space-y-8">
+            <div class="bg-white rounded-lg shadow-md p-6 flex">
+                <div class="flex-grow pr-6">
+                    <h3 class="text-xl font-bold mb-2">Raising money for a new business</h3>
+                    <p class="text-gray-600 mb-4">I am a small business owner, and I am looking to raise money to expand my business. I will use the money to hire more employees, open a second location, and invest in marketing</p>
+                    <button class="bg-gray-100 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-200">Invest now</button>
                 </div>
+                <img src="https://cdn.usegalileo.ai/stability/4083fdc1-e820-4999-985b-f0ef3fa2c0a8.png" alt="Business" class="w-64 h-48 object-cover rounded-md">
             </div>
 
-            <!-- How it works Section -->
-            <div class="flex flex-col gap-10 px-4 py-10 @container">
-                <div class="flex flex-col gap-4">
-                    <h1 class="text-[#0e151b] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
-                        How it works
-                    </h1>
-                    <p class="text-[#0e151b] text-base font-normal leading-normal max-w-[720px]">We offer a wide range of financial services, all powered by blockchain technology.</p>
+            <div class="bg-white rounded-lg shadow-md p-6 flex">
+                <div class="flex-grow pr-6">
+                    <h3 class="text-xl font-bold mb-2">Supporting a family member's medical expenses</h3>
+                    <p class="text-gray-600 mb-4">My brother was recently diagnosed with cancer, and he is struggling to cover his medical expenses. I want to raise money to help him pay for his treatment, as well as his living expenses while he is unable to work</p>
+                    <button class="bg-gray-100 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-200">Invest now</button>
                 </div>
-                <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
-                    <!-- Lend -->
-                    <div class="flex flex-col gap-3 pb-3">
-                        <div
-                          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                          style='background-image: url("https://cdn.usegalileo.ai/sdxl10/3ed28cd2-d5a1-48f8-b0b5-dd0f264f25d4.png");'
-                        ></div>
-                        <div>
-                            <p class="text-[#0e151b] text-base font-medium leading-normal">Lend</p>
-                            <p class="text-[#507695] text-sm font-normal leading-normal">Earn interest on your crypto assets</p>
-                        </div>
-                    </div>
-                    <!-- Borrow -->
-                    <div class="flex flex-col gap-3 pb-3">
-                        <div
-                          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                          style='background-image: url("https://cdn.usegalileo.ai/stability/8e41d926-59dc-452a-ab0c-24b369806239.png");'
-                        ></div>
-                        <div>
-                            <p class="text-[#0e151b] text-base font-medium leading-normal">Borrow</p>
-                            <p class="text-[#507695] text-sm font-normal leading-normal">Unlock liquidity or take out a loan with your digital assets as collateral</p>
-                        </div>
-                    </div>
-                    <!-- Earn -->
-                    <div class="flex flex-col gap-3 pb-3">
-                        <div
-                          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                          style='background-image: url("https://cdn.usegalileo.ai/stability/d550187a-96cc-49e0-9079-7090425c3399.png");'
-                        ></div>
-                        <div>
-                            <p class="text-[#0e151b] text-base font-medium leading-normal">Earn</p>
-                            <p class="text-[#507695] text-sm font-normal leading-normal">Provide liquidity, stake, or farm to earn rewards</p>
-                        </div>
-                    </div>
-                    <!-- Trade -->
-                    <div class="flex flex-col gap-3 pb-3">
-                        <div
-                          class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                          style='background-image: url("https://cdn.usegalileo.ai/stability/4083fdc1-e820-4999-985b-f0ef3fa2c0a8.png");'
-                        ></div>
-                        <div>
-                            <p class="text-[#0e151b] text-base font-medium leading-normal">Trade</p>
-                            <p class="text-[#507695] text-sm font-normal leading-normal">Trade a wide range of assets with low fees</p>
-                        </div>
-                    </div>
-                </div>
+                <img src="https://cdn.usegalileo.ai/stability/8e41d926-59dc-452a-ab0c-24b369806239.png" alt="Medical" class="w-64 h-48 object-cover rounded-md">
             </div>
 
-            <!-- Featured Section -->
-            <h3 class="text-[#0e151b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Featured</h3>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-                <!-- Featured items here -->
-                <!-- ... (Include the featured items as in the original HTML) ... -->
-            </div>
-
-            <!-- Call to Action -->
-            <div class="@container">
-                <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-                    <div class="flex flex-col gap-2 text-center">
-                        <h1 class="text-[#0e151b] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
-                            Ready to get started?
-                        </h1>
-                    </div>
-                    <div class="flex flex-1 justify-center">
-                        <div class="flex justify-center">
-                            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow">
-                                <span class="truncate">Get Started</span>
-                            </button>
-                        </div>
-                    </div>
+            <div class="bg-white rounded-lg shadow-md p-6 flex">
+                <div class="flex-grow pr-6">
+                    <h3 class="text-xl font-bold mb-2">Funding a documentary about climate change</h3>
+                    <p class="text-gray-600 mb-4">I am a filmmaker, and I am passionate about raising awareness of climate change. I want to create a documentary that explores the impact of global warming on communities around the world. I need funding to cover the cost of production and distribution</p>
+                    <button class="bg-gray-100 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-200">Invest now</button>
                 </div>
+                <img src="https://cdn.usegalileo.ai/stability/d550187a-96cc-49e0-9079-7090425c3399.png" alt="Climate" class="w-64 h-48 object-cover rounded-md">
             </div>
+        </div>
+        
+        <div class="flex justify-center items-center space-x-2 mt-8">
+            <button class="text-gray-600 hover:text-gray-900">&lt;</button>
+            <button class="bg-blue-500 text-white w-8 h-8 rounded-full">1</button>
+            <button class="text-gray-600 hover:text-gray-900">2</button>
+            <button class="text-gray-600 hover:text-gray-900">3</button>
+            <button class="text-gray-600 hover:text-gray-900">4</button>
+            <button class="text-gray-600 hover:text-gray-900">5</button>
+            <button class="text-gray-600 hover:text-gray-900">&gt;</button>
         </div>
     </main>
-
-    <!-- PeerLend Section -->
-    <section class="bg-white py-8">
-        <div class="container mx-auto px-4">
-            <header class="flex justify-between items-center mb-8">
-                <div class="flex items-center">
-                    <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Add PeerLend logo SVG here -->
-                        <rect width="24" height="24" fill="#000000"/>
-                    </svg>
-                    <h1 class="text-2xl font-bold">PeerLend</h1>
-                </div>
-                <nav>
-                    <ul class="flex space-x-6">
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Explore</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Lend</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Borrow</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Learn</a></li>
-                    </ul>
-                </nav>
-                <div class="flex items-center">
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg mr-4">Create a project</button>
-                    <img src="https://via.placeholder.com/32" alt="User avatar" class="w-8 h-8 rounded-full">
-                </div>
-            </header>
-
-            <main>
-                <h2 class="text-3xl font-bold mb-4">Borrowing options</h2>
-                <p class="text-gray-600 mb-8">Browse opportunities to borrow from the community</p>
-
-                <div class="bg-gray-100 rounded-lg p-4 mb-8">
-                    <input type="text" placeholder="Search for a project" class="w-full p-2 rounded-lg">
-                </div>
-
-                <div class="flex space-x-4 mb-8">
-                    <button class="text-blue-500 border-b-2 border-blue-500 pb-2">All</button>
-                    <button class="text-gray-500 hover:text-blue-500">Technology</button>
-                    <button class="text-gray-500 hover:text-blue-500">Social Good</button>
-                    <button class="text-gray-500 hover:text-blue-500">Small Business</button>
-                </div>
-
-                <div class="space-y-8">
-                    <!-- Project cards -->
-                    <div class="bg-white rounded-lg shadow-md p-6 flex">
-                        <div class="flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Raising money for a new business</h3>
-                            <p class="text-gray-600 mb-4">I am a small business owner, and I am looking to raise money to expand my business. I will use the money to hire more employees, open a second location, and invest in marketing</p>
-                            <button class="bg-gray-200 text-gray-800
+</body>
+</html>
