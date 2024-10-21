@@ -60,101 +60,154 @@
         </header>
         
         <main class="flex-1">
-            <div class="px-4 md:px-40 py-5 max-w-[960px] mx-auto">
-                <div class="flex flex-wrap justify-between gap-3 p-4">
-                    <div class="flex min-w-72 flex-col gap-3">
-                        <h1 class="text-[#0e151b] tracking-light text-[32px] font-bold leading-tight">Loan overview</h1>
-                        <p class="text-[#507695] text-sm font-normal leading-normal">Summary of your active loans and investments</p>
-                    </div>
-                </div>
-                <div class="pb-3">
-                    <div class="flex border-b border-[#d1dde6] px-4 gap-8">
-                        <a id="all-tab" class="flex flex-col items-center justify-center border-b-[3px] border-b-[#2c90e2] text-[#0e151b] pb-[13px] pt-4" href="#" onclick="showTab('all')">
-                            <p class="text-sm font-bold leading-normal tracking-[0.015em]">All</p>
-                        </a>
-                        <a id="investments-tab" class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#507695] pb-[13px] pt-4" href="#" onclick="showTab('investments')">
-                            <p class="text-sm font-bold leading-normal tracking-[0.015em]">Investments</p>
-                        </a>
-                        <a id="loans-tab" class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#507695] pb-[13px] pt-4" href="#" onclick="showTab('loans')">
-                            <p class="text-sm font-bold leading-normal tracking-[0.015em]">Loans</p>
-                        </a>
-                    </div>
-                </div>
+    <div class="px-4 md:px-40 py-5 max-w-[960px] mx-auto">
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+            <div class="flex min-w-72 flex-col gap-3">
+                <h1 class="text-[#0e151b] tracking-light text-[32px] font-bold leading-tight">Loan overview</h1>
+                <p class="text-[#507695] text-sm font-normal leading-normal">Summary of your active loans and investments</p>
+            </div>
+        </div>
+        <div class="pb-3">
+            <div class="flex border-b border-[#d1dde6] px-4 gap-8">
+                <a id="all-tab" class="flex flex-col items-center justify-center border-b-[3px] border-b-[#2c90e2] text-[#0e151b] pb-[13px] pt-4" href="#" onclick="showTab('all')">
+                    <p class="text-sm font-bold leading-normal tracking-[0.015em]">All</p>
+                </a>
+                <a id="investments-tab" class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#507695] pb-[13px] pt-4" href="#" onclick="showTab('investments')">
+                    <p class="text-sm font-bold leading-normal tracking-[0.015em]">Investments</p>
+                </a>
+                <a id="loans-tab" class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#507695] pb-[13px] pt-4" href="#" onclick="showTab('loans')">
+                    <p class="text-sm font-bold leading-normal tracking-[0.015em]">Loans</p>
+                </a>
+            </div>
+        </div>
 
-                <!-- All tab content -->
-                <div id="all-content">
-                    <div class="flex flex-wrap gap-3 px-4 py-3">
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
-                            <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$1,234</p>
-                            <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Total loans</p></div>
-                        </div>
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
-                            <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$5,678</p>
-                            <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Active loans</p></div>
-                        </div>
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
-                            <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$9,012</p>
-                            <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Total investments</p></div>
-                        </div>
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
-                            <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$3,456</p>
-                            <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Active investments</p></div>
-                        </div>
-                    </div>
-                    
-                    <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Active loans</h2>
-                    <div class="px-4 py-3 @container">
-                        <div class="flex overflow-hidden rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
-                            <table class="flex-1">
-                                <thead>
-                                    <tr class="bg-[#f8fafb]">
-                                        <th class="px-4 py-3 text-left text-[#0e151b] w-[400px] text-sm font-medium leading-normal">Borrower</th>
-                                        <th class="px-4 py-3 text-left text-[#0e151b] w-[400px] text-sm font-medium leading-normal">Amount</th>
-                                        <th class="px-4 py-3 text-left text-[#0e151b] w-[400px] text-sm font-medium leading-normal">Interest rate</th>
-                                        <th class="px-4 py-3 text-left text-[#0e151b] w-[400px] text-sm font-medium leading-normal">Due date</th>
-                                        <th class="px-4 py-3 text-left text-[#0e151b] w-[400px] text-sm font-medium leading-normal">Repayment progress</th>
-                                        <th class="px-4 py-3 text-left text-[#0e151b] w-60 text-sm font-medium leading-normal">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-t border-t-[#d1dde6]">
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-[#0e151b] text-sm font-normal leading-normal">Green Energy Inc.</td>
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-[#507695] text-sm font-normal leading-normal">$5,000</td>
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-[#507695] text-sm font-normal leading-normal">6.7%</td>
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-[#507695] text-sm font-normal leading-normal">Jul 1, 2023</td>
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-sm font-normal leading-normal">
-                                            <div class="flex items-center gap-3">
-                                                <div class="w-[88px] overflow-hidden rounded-sm bg-[#d1dde6]"><div class="h-1 rounded-full bg-[#2c90e2]" style="width: 45.4545%;"></div></div>
-                                                <p class="text-[#0e151b] text-sm font-medium leading-normal">40</p>
-                                            </div>
-                                        </td>
-                                        <td class="h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                                            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#e8eef3] text-[#0e151b] text-sm font-medium leading-normal w-full">
-                                                <span class="truncate">In repayment</span>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr class="border-t border-t-[#d1dde6]">
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-[#0e151b] text-sm font-normal leading-normal">Community Grocers</td>
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-[#507695] text-sm font-normal leading-normal">$10,000</td>
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-[#507695] text-sm font-normal leading-normal">5.9%</td>
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-[#507695] text-sm font-normal leading-normal">Sep 15, 2023</td>
-                                        <td class="h-[72px] px-4 py-2 w-[400px] text-sm font-normal leading-normal">
-                                            <div class="flex items-center gap-3">
-                                                <div class="w-[88px] overflow-hidden rounded-sm bg-[#d1dde6]"><div class="h-1 rounded-full bg-[#2c90e2]" style="width: 22.7273%;"></div></div>
-                                                <p class="text-[#0e151b] text-sm font-medium leading-normal">20</p>
-                                            </div>
-                                        </td>
-                                        <td class="h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                                            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#e8eef3] text-[#0e151b] text-sm font-medium leading-normal w-full">
-                                                <span class="truncate">In repayment</span>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                    <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Active investments</h2>
-                    <div class="px-4 py
+        <div id="all-content">
+            <div class="flex flex-wrap gap-3 px-4 py-3">
+                <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                    <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$1,234</p>
+                    <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Total loans</p></div>
+                </div>
+                <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                    <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$5,678</p>
+                    <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Active loans</p></div>
+                </div>
+                <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                    <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$9,012</p>
+                    <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Total investments</p></div>
+                </div>
+                <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                    <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$3,456</p>
+                    <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Active investments</p></div>
+                </div>
+            </div>
+            
+            <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Active loans</h2>
+            <div class="px-4 py-3 @container">
+                <div class="flex overflow-hidden rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
+                    <table class="flex-1 w-full">
+                        <thead>
+                            <tr class="bg-[#f8fafb]">
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Borrower</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Amount</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Interest rate</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Due date</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Repayment progress</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t border-t-[#d1dde6]">
+                                <td class="px-4 py-2 text-[#0e151b] text-sm font-normal leading-normal">Green Energy Inc.</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">$5,000</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">6.7%</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">Jul 1, 2023</td>
+                                <td class="px-4 py-2 text-sm font-normal leading-normal">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-[88px] bg-[#d1dde6] h-2 rounded-full overflow-hidden">
+                                            <div class="bg-[#2c90e2] h-full" style="width: 40%;"></div>
+                                        </div>
+                                        <span class="text-[#0e151b] text-sm font-medium">40</span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <span class="bg-[#e8eef3] text-[#0e151b] text-sm font-medium px-3 py-1 rounded-full">In repayment</span>
+                                </td>
+                            </tr>
+                            <tr class="border-t border-t-[#d1dde6]">
+                                <td class="px-4 py-2 text-[#0e151b] text-sm font-normal leading-normal">Community Grocers</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">$10,000</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">5.9%</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">Sep 15, 2023</td>
+                                <td class="px-4 py-2 text-sm font-normal leading-normal">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-[88px] bg-[#d1dde6] h-2 rounded-full overflow-hidden">
+                                            <div class="bg-[#2c90e2] h-full" style="width: 20%;"></div>
+                                        </div>
+                                        <span class="text-[#0e151b] text-sm font-medium">20</span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <span class="bg-[#e8eef3] text-[#0e151b] text-sm font-medium px-3 py-1 rounded-full">In repayment</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Active investments</h2>
+            <div class="px-4 py-3 @container">
+                <div class="flex overflow-hidden rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
+                    <table class="flex-1 w-full">
+                        <thead>
+                            <tr class="bg-[#f8fafb]">
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Borrower</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Amount</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Interest rate</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Due date</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Repayment progress</th>
+                                <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t border-t-[#d1dde6]">
+                                <td class="px-4 py-2 text-[#0e151b] text-sm font-normal leading-normal">Green Energy Inc.</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">$5,000</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">6.7%</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">Jul 1, 2023</td>
+                                <td class="px-4 py-2 text-sm font-normal leading-normal">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-[88px] bg-[#d1dde6] h-2 rounded-full overflow-hidden">
+                                            <div class="bg-[#2c90e2] h-full" style="width: 40%;"></div>
+                                        </div>
+                                        <span class="text-[#0e151b] text-sm font-medium">40</span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <span class="bg-[#e8eef3] text-[#0e151b] text-sm font-medium px-3 py-1 rounded-full">In repayment</span>
+                                </td>
+                            </tr>
+                            <tr class="border-t border-t-[#d1dde6]">
+                                <td class="px-4 py-2 text-[#0e151b] text-sm font-normal leading-normal">Community Grocers</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">$10,000</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">5.9%</td>
+                                <td class="px-4 py-2 text-[#507695] text-sm font-normal leading-normal">Sep 15, 2023</td>
+                                <td class="px-4 py-2 text-sm font-normal leading-normal">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-[88px] bg-[#d1dde6] h-2 rounded-full overflow-hidden">
+                                            <div class="bg-[#2c90e2] h-full" style="width: 20%;"></div>
+                                        </div>
+                                        <span class="text-[#0e151b] text-sm font-medium">20</span>
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <span class="bg-[#e8eef3] text-[#0e151b] text-sm font-medium px-3 py-1 rounded-full">In repayment</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
