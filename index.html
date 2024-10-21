@@ -1,0 +1,139 @@
+import React, { useState } from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Home, DollarSign, PieChart, Settings, Bell } from 'lucide-react';
+
+const data = [
+  { name: 'Jan', loans: 4000, investments: 2400 },
+  { name: 'Feb', loans: 3000, investments: 1398 },
+  { name: 'Mar', loans: 2000, investments: 9800 },
+  { name: 'Apr', loans: 2780, investments: 3908 },
+  { name: 'May', loans: 1890, investments: 4800 },
+  { name: 'Jun', loans: 2390, investments: 3800 },
+];
+
+const BlockLoanApp = () => {
+  const [activeTab, setActiveTab] = useState('dashboard');
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'dashboard':
+        return <Dashboard />;
+      case 'marketplace':
+        return <Marketplace />;
+      case 'portfolio':
+        return <Portfolio />;
+      case 'settings':
+        return <Settings />;
+      default:
+        return <Dashboard />;
+    }
+  };
+
+  return (
+    <div className="flex flex-col h-screen bg-gray-100">
+      <header className="bg-blue-600 text-white p-4">
+        <h1 className="text-2xl font-bold">BlockLoan</h1>
+      </header>
+      <main className="flex-grow overflow-auto">
+        {renderContent()}
+      </main>
+      <nav className="bg-white border-t border-gray-200">
+        <div className="flex justify-around">
+          <NavButton icon={<Home />} label="Dashboard" onClick={() => setActiveTab('dashboard')} active={activeTab === 'dashboard'} />
+          <NavButton icon={<DollarSign />} label="Marketplace" onClick={() => setActiveTab('marketplace')} active={activeTab === 'marketplace'} />
+          <NavButton icon={<PieChart />} label="Portfolio" onClick={() => setActiveTab('portfolio')} active={activeTab === 'portfolio'} />
+          <NavButton icon={<Settings />} label="Settings" onClick={() => setActiveTab('settings')} active={activeTab === 'settings'} />
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+const NavButton = ({ icon, label, onClick, active }) => (
+  <button
+    className={`flex flex-col items-center justify-center p-2 w-full ${active ? 'text-blue-600' : 'text-gray-600'}`}
+    onClick={onClick}
+  >
+    {icon}
+    <span className="text-xs mt-1">{label}</span>
+  </button>
+);
+
+const Dashboard = () => (
+  <div className="p-4">
+    <h2 className="text-xl font-semibold mb-4">Dashboard</h2>
+    <div className="bg-white rounded-lg shadow p-4 mb-4">
+      <h3 className="font-semibold mb-2">Account Balance</h3>
+      <p className="text-2xl font-bold">$10,245.67</p>
+    </div>
+    <div className="bg-white rounded-lg shadow p-4 mb-4">
+      <h3 className="font-semibold mb-2">Activity Overview</h3>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="loans" fill="#8884d8" />
+          <Bar dataKey="investments" fill="#82ca9d" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  </div>
+);
+
+const Marketplace = () => (
+  <div className="p-4">
+    <h2 className="text-xl font-semibold mb-4">Loan Marketplace</h2>
+    <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <LoanCard amount={5000} interest={5.5} duration={12} purpose="Business Expansion" />
+      <LoanCard amount={2000} interest={4.8} duration={6} purpose="Education" />
+      <LoanCard amount={10000} interest={6.2} duration={24} purpose="Home Renovation" />
+    </div>
+  </div>
+);
+
+const LoanCard = ({ amount, interest, duration, purpose }) => (
+  <div className="bg-white rounded-lg shadow p-4">
+    <h3 className="font-semibold mb-2">{purpose}</h3>
+    <p className="text-xl font-bold mb-2">${amount}</p>
+    <p className="text-sm text-gray-600 mb-1">Interest: {interest}%</p>
+    <p className="text-sm text-gray-600 mb-2">Duration: {duration} months</p>
+    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+      Invest Now
+    </button>
+  </div>
+);
+
+const Portfolio = () => (
+  <div className="p-4">
+    <h2 className="text-xl font-semibold mb-4">Investment Portfolio</h2>
+    <div className="bg-white rounded-lg shadow p-4 mb-4">
+      <h3 className="font-semibold mb-2">Total Invested</h3>
+      <p className="text-2xl font-bold">$25,750.00</p>
+    </div>
+    <div className="bg-white rounded-lg shadow p-4">
+      <h3 className="font-semibold mb-2">Active Investments</h3>
+      <ul className="divide-y divide-gray-200">
+        <InvestmentItem purpose="Tech Startup" amount={10000} returnRate={7.2} />
+        <InvestmentItem purpose="Real Estate Project" amount={15000} returnRate={6.8} />
+        <InvestmentItem purpose="Green Energy" amount={750} returnRate={5.5} />
+      </ul>
+    </div>
+  </div>
+);
+
+const InvestmentItem = ({ purpose, amount, returnRate }) => (
+  <li className="py-2">
+    <div className="flex justify-between items-center">
+      <div>
+        <p className="font-semibold">{purpose}</p>
+        <p className="text-sm text-gray-600">${amount}</p>
+      </div>
+      <p className="text-green-600 font-semibold">{returnRate}% APY</p>
+    </div>
+  </li>
+);
+
+export default BlockLoanApp;
