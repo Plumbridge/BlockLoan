@@ -1,18 +1,46 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockLoan - Invest</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
     />
-
-    <title>Galileo Design</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
+    <style>
+        body {
+            font-family: "Work Sans", "Noto Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafb]">
+    <div class="relative flex min-h-screen flex-col">
+        <!-- Header -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8eef3] px-10 py-3">
+            <div class="flex items-center gap-4 text-[#0e151b]">
+                <div class="size-4">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h2 class="text-[#0e151b] text-lg font-bold leading-tight tracking-[-0.015em]">BlockLoan</h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+                <div class="flex items-center gap-9">
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="index.html">How It Works</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal font-bold" href="#">Invest</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="borrow.html">Borrow</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="overview.html">Overview</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Log In</a>
+                </div>
+                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Get Started</span>
+                </button>
+            </div>
+        </header>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-[#f8fafb] group/design-root overflow-x-hidden" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
@@ -253,6 +281,35 @@
               </div>
             </div>
           </div>
+           <!-- Footer -->
+        <footer class="bg-[#0e151b] text-white py-8">
+            <div class="max-w-[960px] mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">About BlockLoan</h3>
+                        <p class="text-sm">BlockLoan is a decentralized platform connecting borrowers and investors, offering low-cost, high-speed liquidity for a wide range of assets.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                        <ul class="text-sm">
+                            <li class="mb-2"><a href="index.html" class="hover:text-[#2c90e2]">How It Works</a></li>
+                            <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">Invest</a></li>
+                            <li class="mb-2"><a href="borrow.html" class="hover:text-[#2c90e2]">Borrow</a></li>
+                            <li class="mb-2"><a href="overview.html" class="hover:text-[#2c90e2]">Overview</a></li>
+                            <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                        <p class="text-sm mb-2">Email: support@blockloan.com</p>
+                        <p class="text-sm">Phone: +44 7827439742</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
         </div>
       </div>
     </div>
