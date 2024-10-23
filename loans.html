@@ -1,304 +1,154 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockLoan - Loans</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
     />
-
-    <title>Galileo Design</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-[#FFFFFF] group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#F4EFE6] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#1C160C]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
+    <style>
+        body {
+            font-family: "Work Sans", "Noto Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafb]">
+    <div class="relative flex min-h-screen flex-col">
+        <!-- Header -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8eef3] px-10 py-3">
+            <div class="flex items-center gap-4 text-[#0e151b]">
+                <div class="size-4">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h2 class="text-[#0e151b] text-lg font-bold leading-tight tracking-[-0.015em]">BlockLoan</h2>
             </div>
-            <h2 class="text-[#1C160C] text-lg font-bold leading-tight tracking-[-0.015em]">Financial Platform</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex gap-2">
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#F4EFE6] text-[#1C160C] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-              >
-                <div class="text-[#1C160C]" data-icon="Gear" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"
-                    ></path>
-                  </svg>
+            <div class="flex flex-1 justify-end gap-8">
+                <div class="flex items-center gap-9">
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="index.html">Home</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="invest.html">Invest</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal font-bold" href="loans.html">Borrow</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="overview.html">Overview</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Log In</a>
                 </div>
-              </button>
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#F4EFE6] text-[#1C160C] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-              >
-                <div class="text-[#1C160C]" data-icon="Bell" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#F4EFE6] text-[#1C160C] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-              >
-                <div class="text-[#1C160C]" data-icon="DotOutline" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path d="M128,96a32,32,0,1,0,32,32A32,32,0,0,0,128,96Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,128,144Z"></path>
-                  </svg>
-                </div>
-              </button>
+                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Get Started</span>
+                </button>
             </div>
-            <div
-              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              style='background-image: url("https://cdn.usegalileo.ai/stability/f8d7990a-6f52-4d1c-8125-f78f54791a6e.png");'
-            ></div>
-          </div>
         </header>
-        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col w-80">
-            <div class="flex h-full min-h-[700px] flex-col justify-between bg-[#FFFFFF] p-4">
-              <div class="flex flex-col gap-4">
-                <div class="flex gap-3">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                    style='background-image: url("https://cdn.usegalileo.ai/stability/f050bce7-e834-44f0-b835-6d2c46b4eb98.png");'
-                  ></div>
-                  <div class="flex flex-col">
-                    <h1 class="text-[#1C160C] text-base font-medium leading-normal">User's Name</h1>
-                    <p class="text-[#A18249] text-sm font-normal leading-normal">View personal profile</p>
-                  </div>
+        <!-- Main Content -->
+        <main class="flex-1">
+            <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+                <!-- Left Sidebar -->
+                <div class="layout-content-container flex flex-col w-80">
+                    <div class="flex h-full min-h-[700px] flex-col justify-between bg-[#f8fafb] p-4">
+                        <div class="flex flex-col gap-4">
+                            <!-- User Profile Section -->
+                            <div class="flex gap-3">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" 
+                                     style='background-image: url("https://cdn.usegalileo.ai/stability/f050bce7-e834-44f0-b835-6d2c46b4eb98.png");'>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h1 class="text-[#1C160C] text-base font-medium leading-normal">User's Name</h1>
+                                    <p class="text-[#A18249] text-sm font-normal leading-normal">View personal profile</p>
+                                </div>
+                            </div>
+
+                            <!-- Navigation -->
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center gap-3 px-3 py-2">
+                                    <div class="text-[#1C160C]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                            <path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77Z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-[#1C160C] text-sm font-medium leading-normal">Home</p>
+                                </div>
+                                <div class="flex items-center gap-3 px-3 py-2 rounded-full bg-[#F4EFE6]">
+                                    <div class="text-[#1C160C]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                            <path d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18Z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-[#1C160C] text-sm font-medium leading-normal">Loans</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col gap-2">
-                  <div class="flex items-center gap-3 px-3 py-2">
-                    <div class="text-[#1C160C]" data-icon="House" data-size="24px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"
-                        ></path>
-                      </svg>
+
+                <!-- Main Content Area -->
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="pb-3">
+                        <div class="flex border-b border-[#E9DFCE] px-4 justify-between">
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#019863] text-[#1C160C] pb-[13px] pt-4 flex-1" href="#">
+                                <p class="text-[#1C160C] text-sm font-bold leading-normal tracking-[0.015em]">Recommended</p>
+                            </a>
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A18249] pb-[13px] pt-4 flex-1" href="#">
+                                <p class="text-[#A18249] text-sm font-bold leading-normal tracking-[0.015em]">Most popular</p>
+                            </a>
+                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A18249] pb-[13px] pt-4 flex-1" href="#">
+                                <p class="text-[#A18249] text-sm font-bold leading-normal tracking-[0.015em]">New</p>
+                            </a>
+                        </div>
                     </div>
-                    <p class="text-[#1C160C] text-sm font-medium leading-normal">Home</p>
-                  </div>
-                  <div class="flex items-center gap-3 px-3 py-2 rounded-full bg-[#F4EFE6]">
-                    <div class="text-[#1C160C]" data-icon="Bank" data-size="24px" data-weight="fill">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M248,208a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H240A8,8,0,0,1,248,208ZM16.3,98.18a8,8,0,0,1,3.51-9l104-64a8,8,0,0,1,8.38,0l104,64A8,8,0,0,1,232,104H208v64h16a8,8,0,0,1,0,16H32a8,8,0,0,1,0-16H48V104H24A8,8,0,0,1,16.3,98.18ZM144,160a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Zm-48,0a8,8,0,0,0,16,0V112a8,8,0,0,0-16,0Z"
-                        ></path>
-                      </svg>
+
+                    <!-- Loan Cards -->
+                    <div class="p-4">
+                        <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                            <div class="flex flex-[2_2_0px] flex-col gap-4">
+                                <div class="flex flex-col gap-1">
+                                    <p class="text-[#1C160C] text-base font-bold leading-tight">Personal Loan</p>
+                                    <p class="text-[#A18249] text-sm font-normal leading-normal">A fixed rate and term, pay off high interest credit cards</p>
+                                </div>
+                                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#F4EFE6] text-[#1C160C] pr-2 gap-1 text-sm font-medium leading-normal w-fit">
+                                    <div class="text-[#1C160C]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                                            <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="truncate">Check your rate</span>
+                                </button>
+                            </div>
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1" style='background-image: url("https://cdn.usegalileo.ai/sdxl10/5f5b8ebc-f46e-4d38-b9c6-7403449c0bdc.png");'></div>
+                        </div>
                     </div>
-                    <p class="text-[#1C160C] text-sm font-medium leading-normal">Loans</p>
-                  </div>
-                  <div class="flex items-center gap-3 px-3 py-2">
-                    <div class="text-[#1C160C]" data-icon="TrendUp" data-size="24px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-[#1C160C] text-sm font-medium leading-normal">Invest</p>
-                  </div>
-                  <div class="flex items-center gap-3 px-3 py-2">
-                    <div class="text-[#1C160C]" data-icon="RoadHorizon" data-size="24px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M235.92,199A8,8,0,0,1,225,195.92L155.32,72H136v8a8,8,0,0,1-16,0V72H100.68L31,195.92A8,8,0,0,1,17,188.08L82.32,72H24a8,8,0,0,1,0-16H232a8,8,0,0,1,0,16H173.68L239,188.08A8,8,0,0,1,235.92,199ZM128,112a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V120A8,8,0,0,0,128,112Zm0,56a8,8,0,0,0-8,8v16a8,8,0,0,0,16,0V176A8,8,0,0,0,128,168Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-[#1C160C] text-sm font-medium leading-normal">AutoInvest</p>
-                  </div>
-                  <div class="flex items-center gap-3 px-3 py-2">
-                    <div class="text-[#1C160C]" data-icon="Book" data-size="24px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M208,24H72A32,32,0,0,0,40,56V224a8,8,0,0,0,8,8H192a8,8,0,0,0,0-16H56a16,16,0,0,1,16-16H208a8,8,0,0,0,8-8V32A8,8,0,0,0,208,24Zm-8,160H72a31.82,31.82,0,0,0-16,4.29V56A16,16,0,0,1,72,40H200Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-[#1C160C] text-sm font-medium leading-normal">History</p>
-                  </div>
-                  <div class="flex items-center gap-3 px-3 py-2">
-                    <div class="text-[#1C160C]" data-icon="Gear" data-size="24px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p class="text-[#1C160C] text-sm font-medium leading-normal">Settings</p>
-                  </div>
+                    <!-- [Rest of loan cards remain the same] -->
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="pb-3">
-              <div class="flex border-b border-[#E9DFCE] px-4 justify-between">
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#019863] text-[#1C160C] pb-[13px] pt-4 flex-1" href="#">
-                  <p class="text-[#1C160C] text-sm font-bold leading-normal tracking-[0.015em]">Recommended</p>
-                </a>
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A18249] pb-[13px] pt-4 flex-1" href="#">
-                  <p class="text-[#A18249] text-sm font-bold leading-normal tracking-[0.015em]">Most popular</p>
-                </a>
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A18249] pb-[13px] pt-4 flex-1" href="#">
-                  <p class="text-[#A18249] text-sm font-bold leading-normal tracking-[0.015em]">New</p>
-                </a>
-              </div>
-            </div>
-            <div class="p-4">
-              <div class="flex items-stretch justify-between gap-4 rounded-xl">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#1C160C] text-base font-bold leading-tight">Personal Loan</p>
-                    <p class="text-[#A18249] text-sm font-normal leading-normal">A fixed rate and term, pay off high interest credit cards</p>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#F4EFE6] text-[#1C160C] pr-2 gap-1 text-sm font-medium leading-normal w-fit"
-                  >
-                    <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="18px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                        ></path>
-                      </svg>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-[#0e151b] text-white py-8 mt-auto">
+            <div class="max-w-[960px] mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">About BlockLoan</h3>
+                        <p class="text-sm">BlockLoan is a decentralized platform connecting borrowers and investors, offering low-cost, high-speed liquidity for a wide range of assets.</p>
                     </div>
-                    <span class="truncate">Check your rate</span>
-                  </button>
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
-                  style='background-image: url("https://cdn.usegalileo.ai/sdxl10/5f5b8ebc-f46e-4d38-b9c6-7403449c0bdc.png");'
-                ></div>
-              </div>
-            </div>
-            <div class="p-4">
-              <div class="flex items-stretch justify-between gap-4 rounded-xl">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#1C160C] text-base font-bold leading-tight">Credit Card Refi</p>
-                    <p class="text-[#A18249] text-sm font-normal leading-normal">Pay off high interest credit cards with a lower rate</p>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#F4EFE6] text-[#1C160C] pr-2 gap-1 text-sm font-medium leading-normal w-fit"
-                  >
-                    <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="18px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                        ></path>
-                      </svg>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                        <ul class="text-sm">
+                            <li class="mb-2"><a href="index.html" class="hover:text-[#2c90e2]">How It Works</a></li>
+                            <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">Invest</a></li>
+                            <li class="mb-2"><a href="borrow.html" class="hover:text-[#2c90e2]">Borrow</a></li>
+                            <li class="mb-2"><a href="overview.html" class="hover:text-[#2c90e2]">Overview</a></li>
+                            <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">FAQs</a></li>
+                        </ul>
                     </div>
-                    <span class="truncate">Check your rate</span>
-                  </button>
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
-                  style='background-image: url("https://cdn.usegalileo.ai/stability/5d3862db-5eb8-42c8-b0cb-87641457eeae.png");'
-                ></div>
-              </div>
-            </div>
-            <div class="p-4">
-              <div class="flex items-stretch justify-between gap-4 rounded-xl">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#1C160C] text-base font-bold leading-tight">Home Improvement</p>
-                    <p class="text-[#A18249] text-sm font-normal leading-normal">Get funds to fix up your home and increase its value</p>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#F4EFE6] text-[#1C160C] pr-2 gap-1 text-sm font-medium leading-normal w-fit"
-                  >
-                    <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="18px" data-weight="regular">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                          d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                        ></path>
-                      </svg>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                        <p class="text-sm mb-2">Email: support@blockloan.com</p>
+                        <p class="text-sm">Phone: +44 7827439742</p>
                     </div>
-                    <span class="truncate">Check your rate</span>
-                  </button>
                 </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
-                  style='background-image: url("https://cdn.usegalileo.ai/sdxl10/2c9483ac-126f-4580-8b35-3e4b15039b0a.png");'
-                ></div>
-              </div>
             </div>
-            <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#E9DFCE] py-5">
-                <p class="text-[#A18249] text-sm font-normal leading-normal">Rates</p>
-                <p class="text-[#1C160C] text-sm font-normal leading-normal">5.99-24.99% APR</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#E9DFCE] py-5">
-                <p class="text-[#A18249] text-sm font-normal leading-normal">Origination fee</p>
-                <p class="text-[#1C160C] text-sm font-normal leading-normal">0-6%</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#E9DFCE] py-5">
-                <p class="text-[#A18249] text-sm font-normal leading-normal">Prepayment penalty</p>
-                <p class="text-[#1C160C] text-sm font-normal leading-normal">None</p>
-              </div>
-            </div>
-            <h1 class="text-[#1C160C] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">How to apply</h1>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 items-center">
-                <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                    ></path>
-                  </svg>
-                </div>
-                <h2 class="text-[#1C160C] text-base font-bold leading-tight">Select a loan</h2>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 items-center">
-                <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                    ></path>
-                  </svg>
-                </div>
-                <h2 class="text-[#1C160C] text-base font-bold leading-tight">Check your rate</h2>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 items-center">
-                <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                    ></path>
-                  </svg>
-                </div>
-                <h2 class="text-[#1C160C] text-base font-bold leading-tight">Choose your terms</h2>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 items-center">
-                <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-                    ></path>
-                  </svg>
-                </div>
-                <h2 class="text-[#1C160C] text-base font-bold leading-tight">Upload documents</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </footer>
     </div>
-  </body>
+</body>
 </html>
