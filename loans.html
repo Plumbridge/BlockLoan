@@ -51,21 +51,24 @@
                         <div class="flex flex-col gap-4">
                             <h1 class="text-[#0e161b] text-base font-medium leading-normal">Project Fund</h1>
                             <div class="flex flex-col gap-2">
+                                <!-- Projects first -->
                                 <div class="flex items-center gap-3 px-3 py-2 rounded-xl bg-[#e8eef3]">
-                                    <div class="text-[#0e161b]" data-icon="Money" data-size="24px" data-weight="regular">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                            <path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM240,56H16a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H240a8,8,0,0,0,8-8V64A8,8,0,0,0,240,56ZM193.65,184H62.35A56.78,56.78,0,0,0,24,145.65v-35.3A56.78,56.78,0,0,0,62.35,72h131.3A56.78,56.78,0,0,0,232,110.35v35.3A56.78,56.78,0,0,0,193.65,184ZM232,93.37A40.81,40.81,0,0,1,210.63,72H232ZM45.37,72A40.81,40.81,0,0,1,24,93.37V72ZM24,162.63A40.81,40.81,0,0,1,45.37,184H24ZM210.63,184A40.81,40.81,0,0,1,232,162.63V184Z"></path>
-                                        </svg>
-                                    </div>
-                                    <p class="text-[#0e161b] text-sm font-medium leading-normal">Loans</p>
-                                </div>
-                                <a href="invest.html" class="flex items-center gap-3 px-3 py-2">
                                     <div class="text-[#0e161b]" data-icon="Megaphone" data-size="24px" data-weight="fill">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                                             <path d="M192,72H152.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,24,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,151.12,214l11,7.33A16,16,0,0,0,186.5,212l11.77-44.36A48,48,0,0,0,192,72ZM171,207.89l0,.11-11-7.33V168h21.6ZM192,152H160V88h32a32,32,0,1,1,0,64Z"></path>
                                         </svg>
                                     </div>
                                     <p class="text-[#0e161b] text-sm font-medium leading-normal">Projects</p>
+                                </div>
+                                
+                                <!-- Loans second -->
+                                <a href="invest.html" class="flex items-center gap-3 px-3 py-2">
+                                    <div class="text-[#0e161b]" data-icon="Money" data-size="24px" data-weight="regular">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                            <path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM240,56H16a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H240a8,8,0,0,0,8-8V64A8,8,0,0,0,240,56ZM193.65,184H62.35A56.78,56.78,0,0,0,24,145.65v-35.3A56.78,56.78,0,0,0,62.35,72h131.3A56.78,56.78,0,0,0,232,110.35v35.3A56.78,56.78,0,0,0,193.65,184ZM232,93.37A40.81,40.81,0,0,1,210.63,72H232ZM45.37,72A40.81,40.81,0,0,1,24,93.37V72ZM24,162.63A40.81,40.81,0,0,1,45.37,184H24ZM210.63,184A40.81,40.81,0,0,1,232,162.63V184Z"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-[#0e161b] text-sm font-medium leading-normal">Loans</p>
                                 </a>
                             </div>
                         </div>
@@ -96,94 +99,99 @@
 
                 <!-- Main Content Area -->
                 <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                    <div class="pb-3">
-                        <div class="flex border-b border-[#E9DFCE] px-4 justify-between">
-                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#019863] text-[#1C160C] pb-[13px] pt-4 flex-1" href="#">
-                                <p class="text-[#1C160C] text-sm font-bold leading-normal tracking-[0.015em]">Recommended</p>
-                            </a>
-                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A18249] pb-[13px] pt-4 flex-1" href="#">
-                                <p class="text-[#A18249] text-sm font-bold leading-normal tracking-[0.015em]">Most popular</p>
-                            </a>
-                            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A18249] pb-[13px] pt-4 flex-1" href="#">
-                                <p class="text-[#A18249] text-sm font-bold leading-normal tracking-[0.015em]">New</p>
-                            </a>
-                        </div>
+                    <div class="flex flex-wrap justify-between gap-3 p-4">
+                        <p class="text-[#0e161b] tracking-light text-[32px] font-bold leading-tight min-w-72">Community loans</p>
                     </div>
-
-                    <!-- Loan Cards -->
-                    <div class="p-4">
-                        <div class="flex items-stretch justify-between gap-4 rounded-xl">
-                            <div class="flex flex-[2_2_0px] flex-col gap-4">
-                                <div class="flex flex-col gap-1">
-                                    <p class="text-[#1C160C] text-base font-bold leading-tight">Personal Loan</p>
-                                    <p class="text-[#A18249] text-sm font-normal leading-normal">A fixed rate and term, pay off high interest credit cards</p>
-                                </div>
-                                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#F4EFE6] text-[#1C160C] pr-2 gap-1 text-sm font-medium leading-normal w-fit">
-                                    <div class="text-[#1C160C]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
-                                            <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                                        </svg>
-                                    </div>
-                                    <span class="truncate">Check your rate</span>
-                                </button>
-                            </div>
-                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1" style='background-image: url("https://cdn.usegalileo.ai/sdxl10/5f5b8ebc-f46e-4d38-b9c6-7403449c0bdc.png");'></div>
-                        </div>
-                    </div>
-
-                    <!-- Additional loan cards would go here -->
                     
-                    <!-- Loan Info Grid -->
-                    <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
-                        <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#E9DFCE] py-5">
-                            <p class="text-[#A18249] text-sm font-normal leading-normal">Rates</p>
-                            <p class="text-[#1C160C] text-sm font-normal leading-normal">5.99-24.99% APR</p>
+                    <!-- Loan Cards -->
+                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
+                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/2c0dea63-4a45-4b59-b7aa-5deeb31a3da0.png");'>
+                            </div>
+                            <div class="flex flex-1 flex-col justify-center">
+                                <p class="text-[#0e161b] text-base font-medium leading-normal">College tuition & expenses</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 8%</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">
+                                    I'm a 23-year-old college student trying to make ends meet. I have a part-time job and I need help paying for my tuition, textbooks, and rent this semester.
+                                </p>
+                            </div>
                         </div>
-                        <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#E9DFCE] py-5">
-                            <p class="text-[#A18249] text-sm font-normal leading-normal">Origination fee</p>
-                            <p class="text-[#1C160C] text-sm font-normal leading-normal">0-6%</p>
-                        </div>
-                        <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#E9DFCE] py-5">
-                            <p class="text-[#A18249] text-sm font-normal leading-normal">Prepayment penalty</p>
-                            <p class="text-[#1C160C] text-sm font-normal leading-normal">None</p>
+                        <div class="shrink-0">
+                            <p class="text-[#0e161b] text-base font-normal leading-normal">$2,000</p>
                         </div>
                     </div>
 
-                    <!-- How to Apply Section -->
-                    <h1 class="text-[#1C160C] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3
-                        pt-5">How to apply</h1>
-                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-                        <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 items-center">
-                            <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                                </svg>
+                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
+                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/4e080fe8-53e0-4e68-83bb-023483384d30.png");'>
                             </div>
-                            <h2 class="text-[#1C160C] text-base font-bold leading-tight">Select a loan</h2>
+                            <div class="flex flex-1 flex-col justify-center">
+                                <p class="text-[#0e161b] text-base font-medium leading-normal">Rent & groceries</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 7%</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">
+                                    I lost my job due to the COVID-19 pandemic and I'm struggling to pay my bills and feed my family. I'm looking for help to cover my rent and groceries for the next two months.
+                                </p>
+                            </div>
                         </div>
-                        <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 items-center">
-                            <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                                </svg>
-                            </div>
-                            <h2 class="text-[#1C160C] text-base font-bold leading-tight">Check your rate</h2>
+                        <div class="shrink-0">
+                            <p class="text-[#0e161b] text-base font-normal leading-normal">$1,500</p>
                         </div>
-                        <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 items-center">
-                            <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                                </svg>
+                    </div>
+
+                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
+                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/e02a52cd-15e2-473e-ad30-b3ab0f024ea1.png");'>
                             </div>
-                            <h2 class="text-[#1C160C] text-base font-bold leading-tight">Choose your terms</h2>
+                            <div class="flex flex-1 flex-col justify-center">
+                                <p class="text-[#0e161b] text-base font-medium leading-normal">Small business support</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 9%</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">
+                                    I'm a small business owner who's been impacted by the pandemic. I need some extra capital to keep my business running while I wait for my PPP loan to be approved.
+                                </p>
+                            </div>
                         </div>
-                        <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 items-center">
-                            <div class="text-[#1C160C]" data-icon="ArrowRight" data-size="24px" data-weight="regular">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
-                                </svg>
+                        <div class="shrink-0">
+                            <p class="text-[#0e161b] text-base font-normal leading-normal">$3,500</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
+                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/6cb3fac7-1d45-4b99-84e2-d3d7bb1752e4.png");'>
                             </div>
-                            <h2 class="text-[#1C160C] text-base font-bold leading-tight">Upload documents</h2>
+                            <div class="flex flex-1
+                                flex-col justify-center">
+                                <p class="text-[#0e161b] text-base font-medium leading-normal">Car repair & maintenance</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 6%</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">
+                                    I'm a 35-year-old single mom who's struggling to make ends meet. I need help paying for my car repairs so I can continue to get to work and take my kids to school.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shrink-0">
+                            <p class="text-[#0e161b] text-base font-normal leading-normal">$800</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
+                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/7d7ce35b-5eeb-49eb-857c-1189a864c51d.png");'>
+                            </div>
+                            <div class="flex flex-1 flex-col justify-center">
+                                <p class="text-[#0e161b] text-base font-medium leading-normal">Creative project funding</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 10%</p>
+                                <p class="text-[#507a95] text-sm font-normal leading-normal">
+                                    I'm a 28-year-old freelance designer who's looking for some extra cash to fund my new project. I need help covering the costs of software, hosting, and marketing.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shrink-0">
+                            <p class="text-[#0e161b] text-base font-normal leading-normal">$1,200</p>
                         </div>
                     </div>
                 </div>
