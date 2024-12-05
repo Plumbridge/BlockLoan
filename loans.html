@@ -1,228 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlockLoan - Loans</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <style>
-        body {
-            font-family: "Work Sans", "Noto Sans", sans-serif;
-        }
-    </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BlockLoan - Loans</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" />
+   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+   <style>
+       body {
+           font-family: "Work Sans", "Noto Sans", sans-serif;
+       }
+   </style>
 </head>
 <body class="bg-[#f8fafb]">
-    <div class="relative flex min-h-screen flex-col">
-        <!-- Header -->
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8eef3] px-10 py-3">
-            <div class="flex items-center gap-4 text-[#0e151b]">
-                <div class="size-4">
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
-                    </svg>
-                </div>
-                <h2 class="text-[#0e151b] text-lg font-bold leading-tight tracking-[-0.015em]">BlockLoan</h2>
-            </div>
-            <div class="flex flex-1 justify-end gap-8">
-                <div class="flex items-center gap-9">
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="index.html">Home</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="invest.html">Invest</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal font-bold" href="borrow.html">Borrow</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="overview.html">Overview</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Log In</a>
-                </div>
-                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
-                    <span class="truncate">Get Started</span>
-                </button>
-            </div>
-        </header>
+   <div class="relative flex min-h-screen flex-col">
+       <!-- Header -->
+       <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8eef3] px-10 py-3">
+           <div class="flex items-center gap-4 text-[#0e151b]">
+               <div class="size-4">
+                   <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+                   </svg>
+               </div>
+               <h2 class="text-[#0e151b] text-lg font-bold leading-tight tracking-[-0.015em]">BlockLoan</h2>
+           </div>
+           <div class="flex flex-1 justify-end gap-8">
+               <div class="flex items-center gap-9">
+                   <a class="text-[#0e151b] text-sm font-medium leading-normal" href="index.html">Home</a>
+                   <a class="text-[#0e151b] text-sm font-medium leading-normal" href="invest.html">Invest</a>
+                   <a class="text-[#0e151b] text-sm font-medium leading-normal font-bold" href="borrow.html">Borrow</a>
+                   <a class="text-[#0e151b] text-sm font-medium leading-normal" href="overview.html">Overview</a>
+                   <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Log In</a>
+               </div>
+               <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
+                   <span class="truncate">Get Started</span>
+               </button>
+           </div>
+       </header>
 
-        <!-- Main Content -->
-        <main class="flex-1">
-            <div class="gap-1 px-6 flex flex-1 justify-center py-5">
-                <!-- Left Sidebar -->
-                <div class="layout-content-container flex flex-col w-80">
-                    <div class="flex h-full min-h-[700px] flex-col justify-between bg-[#f8fafb] p-4">
-                        <div class="flex flex-col gap-4">
-                            <h1 class="text-[#0e161b] text-base font-medium leading-normal">Project Fund</h1>
-                            <div class="flex flex-col gap-2">
-                                <!-- Projects button -->
-                                <a href="invest.html" class="flex items-center gap-3 px-3 py-2">
-                                    <div class="text-[#0e161b]" data-icon="Megaphone" data-size="24px" data-weight="fill">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                            <path d="M192,72H152.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,24,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,151.12,214l11,7.33A16,16,0,0,0,186.5,212l11.77-44.36A48,48,0,0,0,192,72ZM171,207.89l0,.11-11-7.33V168h21.6ZM192,152H160V88h32a32,32,0,1,1,0,64Z"></path>
-                                        </svg>
-                                    </div>
-                                    <p class="text-[#0e161b] text-sm font-medium leading-normal">Projects</p>
-                                </a>
-                                
-                                <!-- Loans button - highlighted -->
-                                <div class="flex items-center gap-3 px-3 py-2 rounded-xl bg-[#e8eef3]">
-                                    <div class="text-[#0e161b]" data-icon="Money" data-size="24px" data-weight="regular">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                            <path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM240,56H16a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H240a8,8,0,0,0,8-8V64A8,8,0,0,0,240,56ZM193.65,184H62.35A56.78,56.78,0,0,0,24,145.65v-35.3A56.78,56.78,0,0,0,62.35,72h131.3A56.78,56.78,0,0,0,232,110.35v35.3A56.78,56.78,0,0,0,193.65,184ZM232,93.37A40.81,40.81,0,0,1,210.63,72H232ZM45.37,72A40.81,40.81,0,0,1,24,93.37V72ZM24,162.63A40.81,40.81,0,0,1,45.37,184H24ZM210.63,184A40.81,40.81,0,0,1,232,162.63V184Z"></path>
-                                        </svg>
-                                    </div>
-                                    <p class="text-[#0e161b] text-sm font-medium leading-normal">Loans</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 @container">
-                        <div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-[#d1dde6] bg-[#f8fafb] p-5 @[480px]:flex-row @[480px]:items-center">
-                            <div class="flex flex-col gap-1">
-                                <p class="text-[#0e161b] text-base font-bold leading-tight">Invest in Personal Loans</p>
-                                <p class="text-[#507a95] text-base font-normal leading-normal">Earn interest with a 100% principal guarantee</p>
-                            </div>
-                            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#2c99e2] text-[#f8fafb] text-sm font-medium leading-normal">
-                                <span class="truncate">Start Investing</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="p-4 @container">
-                        <div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-[#d1dde6] bg-[#f8fafb] p-5 @[480px]:flex-row @[480px]:items-center">
-                            <div class="flex flex-col gap-1">
-                                <p class="text-[#0e161b] text-base font-bold leading-tight">Fund Projects</p>
-                                <p class="text-[#507a95] text-base font-normal leading-normal">Invest in startups, real estate, and more</p>
-                            </div>
-                            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#2c99e2] text-[#f8fafb] text-sm font-medium leading-normal">
-                                <span class="truncate">Start Funding</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+       <!-- Main Content -->
+       <main class="flex-1">
+           <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+               <!-- Left Sidebar -->
+               <div class="layout-content-container flex flex-col w-80">
+                   <div class="flex h-full min-h-[700px] flex-col justify-between bg-[#f8fafb] p-4">
+                       <div class="flex flex-col gap-4">
+                           <h1 class="text-[#0e161b] text-base font-medium leading-normal">Project Fund</h1>
+                           <div class="flex flex-col gap-2">
+                               <!-- Projects button -->
+                               <a href="invest.html" class="flex items-center gap-3 px-3 py-2">
+                                   <div class="text-[#0e161b]" data-icon="Megaphone" data-size="24px" data-weight="fill">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                           <path d="M192,72H152.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,24,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,151.12,214l11,7.33A16,16,0,0,0,186.5,212l11.77-44.36A48,48,0,0,0,192,72ZM171,207.89l0,.11-11-7.33V168h21.6ZM192,152H160V88h32a32,32,0,1,1,0,64Z"></path>
+                                       </svg>
+                                   </div>
+                                   <p class="text-[#0e161b] text-sm font-medium leading-normal">Projects</p>
+                               </a>
+                               
+                               <!-- Loans button - highlighted -->
+                               <div class="flex items-center gap-3 px-3 py-2 rounded-xl bg-[#e8eef3]">
+                                   <div class="text-[#0e161b]" data-icon="Money" data-size="24px" data-weight="regular">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                           <path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM240,56H16a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H240a8,8,0,0,0,8-8V64A8,8,0,0,0,240,56ZM193.65,184H62.35A56.78,56.78,0,0,0,24,145.65v-35.3A56.78,56.78,0,0,0,62.35,72h131.3A56.78,56.78,0,0,0,232,110.35v35.3A56.78,56.78,0,0,0,193.65,184ZM232,93.37A40.81,40.81,0,0,1,210.63,72H232ZM45.37,72A40.81,40.81,0,0,1,24,93.37V72ZM24,162.63A40.81,40.81,0,0,1,45.37,184H24ZM210.63,184A40.81,40.81,0,0,1,232,162.63V184Z"></path>
+                                       </svg>
+                                   </div>
+                                   <p class="text-[#0e161b] text-sm font-medium leading-normal">Loans</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="p-4 @container">
+                       <div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-[#d1dde6] bg-[#f8fafb] p-5 @[480px]:flex-row @[480px]:items-center">
+                           <div class="flex flex-col gap-1">
+                               <p class="text-[#0e161b] text-base font-bold leading-tight">Invest in Personal Loans</p>
+                               <p class="text-[#507a95] text-base font-normal leading-normal">Earn interest with a 100% principal guarantee</p>
+                           </div>
+                           <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#2c99e2] text-[#f8fafb] text-sm font-medium leading-normal">
+                               <span class="truncate">Start Investing</span>
+                           </button>
+                       </div>
+                   </div>
+                   <div class="p-4 @container">
+                       <div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-[#d1dde6] bg-[#f8fafb] p-5 @[480px]:flex-row @[480px]:items-center">
+                           <div class="flex flex-col gap-1">
+                               <p class="text-[#0e161b] text-base font-bold leading-tight">Fund Projects</p>
+                               <p class="text-[#507a95] text-base font-normal leading-normal">Invest in startups, real estate, and more</p>
+                           </div>
+                           <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#2c99e2] text-[#f8fafb] text-sm font-medium leading-normal">
+                               <span class="truncate">Start Funding</span>
+                           </button>
+                       </div>
+                   </div>
+               </div>
 
-                <!-- Main Content Area -->
-                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                    <div class="flex flex-wrap justify-between gap-3 p-4">
-                        <p class="text-[#0e161b] tracking-light text-[32px] font-bold leading-tight min-w-72">Community loans</p>
-                    </div>
-                    
-                    <!-- Loan Cards -->
-                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
-                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/2c0dea63-4a45-4b59-b7aa-5deeb31a3da0.png");'>
-                            </div>
-                            <div class="flex flex-1 flex-col justify-center">
-                                <p class="text-[#0e161b] text-base font-medium leading-normal">College tuition & expenses</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 8%</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">
-                                    I'm a 23-year-old college student trying to make ends meet. I have a part-time job and I need help paying for my tuition, textbooks, and rent this semester.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="shrink-0">
-                            <p class="text-[#0e161b] text-base font-normal leading-normal">$2,000</p>
-                        </div>
-                    </div>
+               <!-- Main Content Area -->
+               <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                   <div class="flex flex-wrap justify-between gap-3 p-4">
+                       <p class="text-[#0e161b] tracking-light text-[32px] font-bold leading-tight min-w-72">Community loans</p>
+                   </div>
+                   
+                   <!-- Loan Cards -->
+                   <div class="flex flex-col divide-y divide-gray-100">
+                       <!-- College tuition loan -->
+                       <div class="flex gap-4 bg-white px-4 py-5 justify-between">
+                           <div class="flex flex-col gap-2 flex-1">
+                               <div class="flex justify-between items-start">
+                                   <h3 class="text-[#0e161b] text-lg font-semibold">College tuition & expenses</h3>
+                                   <span class="text-xl font-bold text-[#2c90e2]">$2,000</span>
+                               </div>
+                               <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
+                                   8% Interest Rate
+                               </div>
+                               <p class="text-[#507a95] text-base mt-1">
+                                   I'm a 23-year-old college student trying to make ends meet. I have a part-time job and I need help paying for my tuition, textbooks, and rent this semester.
+                               </p>
+                           </div>
+                       </div>
 
-                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
-                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/4e080fe8-53e0-4e68-83bb-023483384d30.png");'>
-                            </div>
-                            <div class="flex flex-1 flex-col justify-center">
-                                <p class="text-[#0e161b] text-base font-medium leading-normal">Rent & groceries</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 7%</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">
-                                    I lost my job due to the COVID-19 pandemic and I'm struggling to pay my bills and feed my family. I'm looking for help to cover my rent and groceries for the next two months.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="shrink-0">
-                            <p class="text-[#0e161b] text-base font-normal leading-normal">$1,500</p>
-                        </div>
-                    </div>
+                       <!-- Rent & groceries loan -->
+                       <div class="flex gap-4 bg-white px-4 py-5 justify-between">
+                           <div class="flex flex-col gap-2 flex-1">
+                               <div class="flex justify-between items-start">
+                                   <h3 class="text-[#0e161b] text-lg font-semibold">Rent & groceries</h3>
+                                   <span class="text-xl font-bold text-[#2c90e2]">$1,500</span>
+                               </div>
+                               <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
+                                   7% Interest Rate
+                               </div>
+                               <p class="text-[#507a95] text-base mt-1">
+                                   I lost my job due to the COVID-19 pandemic and I'm struggling to pay my bills and feed my family. I'm looking for help to cover my rent and groceries for the next two months.
+                               </p>
+                           </div>
+                       </div>
 
-                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
-                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/e02a52cd-15e2-473e-ad30-b3ab0f024ea1.png");'>
-                            </div>
-                            <div class="flex flex-1 flex-col justify-center">
-                                <p class="text-[#0e161b] text-base font-medium leading-normal">Small business support</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 9%</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">
-                                    I'm a small business owner who's been impacted by the pandemic. I need some extra capital to keep my business running while I wait for my PPP loan to be approved.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="shrink-0">
-                            <p class="text-[#0e161b] text-base font-normal leading-normal">$3,500</p>
-                        </div>
-                    </div>
+                       <!-- Small business support loan -->
+                       <div class="flex gap-4 bg-white px-4 py-5 justify-between">
+                           <div class="flex flex-col gap-2 flex-1">
+                               <div class="flex justify-between items-start">
+                                   <h3 class="text-[#0e161b] text-lg font-semibold">Small business support</h3>
+                                   <span class="text-xl font-bold text-[#2c90e2]">$3,500</span>
+                               </div>
+                               <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
+                                   9% Interest Rate
+                               </div>
+                               <p class="text-[#507a95] text-base mt-1">
+                                   I'm a small business owner who's been impacted by the pandemic. I need some extra capital to keep my business running while I wait for my PPP loan to be approved.
+                               </p>
+                           </div>
+                       </div>
 
-                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
-                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/6cb3fac7-1d45-4b99-84e2-d3d7bb1752e4.png");'>
-                            </div>
-                            <div class="flex flex-1 flex-col justify-center">
-                                <p class="text-[#0e161b] text-base font-medium leading-normal">Car repair & maintenance</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 6%</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">
-                                    I'm a 35-year-old single mom who's struggling to make ends meet. I need help paying for my car repairs so I can continue to get to work and take my kids to school.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="shrink-0">
-                            <p class="text-[#0e161b] text-base font-normal leading-normal">$800</p>
-                        </div>
-                    </div>
+                       <!-- Car repair loan -->
+                       <div class="flex gap-4 bg-white px-4 py-5 justify-between">
+                           <div class="flex flex-col gap-2 flex-1">
+                               <div class="flex justify-between items-start">
+                                   <h3 class="text-[#0e161b] text-lg font-semibold">Car repair & maintenance</h3>
+                                   <span class="text-xl font-bold text-[#2c90e2]">$800</span>
+                               </div>
+                               <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
+                                   6% Interest Rate
+                               </div>
+                               <p class="text-[#507a95] text-base mt-1">
+                                   I'm a 35-year-old single mom who's struggling to make ends meet. I need help paying for my car repairs so I can continue to get to work and take my kids to school.
+                               </p>
+                           </div>
+                       </div>
 
-                    <div class="flex gap-4 bg-white px-4 py-3 justify-between">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px]" 
-                                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/7d7ce35b-5eeb-49eb-857c-1189a864c51d.png");'>
-                            </div>
-                            <div class="flex flex-1 flex-col justify-center">
-                                <p class="text-[#0e161b] text-base font-medium leading-normal">Creative project funding</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">Interest rate: 10%</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">
-                                    I'm a 28-year-old freelance designer who's looking for some extra cash to fund my new project. I need help covering the costs of software, hosting, and marketing.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="shrink-0">
-                            <p class="text-[#0e161b] text-base font-normal leading-normal">$1,200</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+                       <!-- Creative project loan -->
+                       <div class="flex gap-4 bg-white px-4 py-5 justify-between">
+                           <div class="flex flex-col gap-2 flex-1">
+                               <div class="flex justify-between items-start">
+                                   <h3 class="text-[#0e161b] text-lg font-semibold">Creative project funding</h3>
+                                   <span class="text-xl font-bold text-[#2c90e2]">$1,200</span>
+                               </div>
+                               <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
+                                   10% Interest Rate
+                               </div>
+                               <p class="text-[#507a95] text-base mt-1">
+                                   I'm a 28-year-old freelance designer who's looking for some extra cash to fund my new project. I need help covering the costs of software, hosting, and marketing.
+                               </p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </main>
 
-        <!-- Footer -->
-        <footer class="bg-[#0e151b] text-white py-8 mt-auto">
-            <div class="max-w-[960px] mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div>
-                        <h3 class="text-lg font-bold mb-4">About BlockLoan</h3>
-                        <p class="text-sm">BlockLoan is a decentralized platform connecting borrowers and investors, offering low-cost, high-speed liquidity for a wide range of assets.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
-                        <ul class="text-sm">
-                            <li class="mb-2"><a href="index.html" class="hover:text-[#2c90e2]">How It Works</a></li>
-                            <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">Invest</a></li>
-                            <li class="mb-2"><a href="borrow.html" class="hover:text-[#2c90e2]">Borrow</a></li>
-                            <li class="mb-2"><a href="overview.html" class="hover:text-[#2c90e2]">Overview</a></li>
-                            <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">FAQs</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold mb-4">Contact Us</h3>
-                        <p class="text-sm mb-2">Email: support@blockloan.com</p>
-                        <p class="text-sm">Phone: +44 7827439742</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+       <!-- Footer -->
+       <footer class="bg-[#0e151b] text-white py-8 mt-auto">
+           <div class="max-w-[960px] mx-auto px-4">
+               <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                   <div>
+                       <h3 class="text-lg font-bold mb-4">About BlockLoan</h3>
+                       <p class="text-sm">BlockLoan is a decentralised platform connecting borrowers and investors, offering low-cost, high-speed liquidity for a wide range of assets.</p>
+                   </div>
+                   <div>
+                       <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                       <ul class="text-sm">
+                           <li class="mb-2"><a href="index.html" class="hover:text-[#2c90e2]">How It Works</a></li>
+                           <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">Invest</a></li>
+                           <li class="mb-2"><a href="borrow.html" class="hover:text-[#2c90e2]">Borrow</a></li>
+                           <li class="mb-2"><a href="overview.html" class="hover:text-[#2c90e2]">Overview</a></li>
+                           <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">FAQs</a></li>
+                       </ul>
+                   </div>
+                   <div>
+                       <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                       <p class="text-sm mb-2">Email: support@blockloan.com</p>
+                       <p class="text-sm">Phone: +44 7827439742</p>
+                   </div>
+               </div>
+           </div>
+       </footer>
+   </div>
 </body>
 </html>
