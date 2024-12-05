@@ -14,9 +14,19 @@
         @media (max-width: 768px) {
             .mobile-menu {
                 display: none;
+                background: white;
+                box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
             }
             .mobile-menu.active {
                 display: block;
+            }
+            .mobile-menu a {
+                display: block;
+                padding: 12px 16px;
+                border-bottom: 1px solid #e8eef3;
+            }
+            .mobile-menu a:hover {
+                background: #f8fafb;
             }
         }
     </style>
@@ -160,8 +170,32 @@
     </div>
 
     <script>
+        // Menu toggle
         document.getElementById('menuButton').addEventListener('click', function() {
-            document.querySelector('.mobile-menu').classList.toggle('active');
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('active');
+            const isExpanded = menu.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.querySelector('.mobile-menu');
+            const menuButton = document.getElementById('menuButton');
+            if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Update active page in menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const menuLinks = document.querySelectorAll('.mobile-menu a');
+            menuLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('text-[#2c90e2]');
+                }
+            });
         });
     </script>
 </body>
