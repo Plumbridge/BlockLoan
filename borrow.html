@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlockLoan - Borrow</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
         body {
@@ -40,106 +37,82 @@
                 </button>
             </div>
         </header>
-        
+
         <main class="flex-1">
             <div class="px-4 md:px-40 py-5 max-w-[960px] mx-auto">
-                <div class="flex justify-between items-center mb-6">
-                    <div>
-                        <h1 class="text-[#0e151b] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">Create a loan listing</h1>
-                        <p class="text-[#507695] text-base font-normal leading-normal">Share your story and connect with potential lenders</p>
-                    </div>
-                    <button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
-                        Create Listing
-                    </button>
-                </div>
+                <h1 class="text-[#0e151b] text-4xl font-black leading-tight tracking-[-0.033em] max-w-[720px] mb-6">Create your loan listing</h1>
+                <p class="text-[#507695] text-base font-normal leading-normal mb-8">Tell the community about your project and funding needs</p>
 
-                <!-- Loan Creation Form -->
-                <div class="bg-white rounded-xl p-8 mb-10">
+                <div class="bg-white rounded-xl p-8 mb-12">
                     <form class="space-y-6">
                         <div>
-                            <label class="block text-[#0e151b] text-sm font-medium mb-2">Listing Title</label>
-                            <input type="text" class="w-full rounded-xl border-[#e8eef3] p-3" placeholder="Give your listing a clear, descriptive title"/>
+                            <label class="block text-[#0e151b] text-sm font-medium mb-2">Project Title</label>
+                            <input type="text" class="w-full rounded-xl border border-[#e8eef3] p-3 focus:ring-2 focus:ring-[#2c90e2]" required>
                         </div>
-                        
+
+                        <div>
+                            <label class="block text-[#0e151b] text-sm font-medium mb-2">Description</label>
+                            <textarea class="w-full rounded-xl border border-[#e8eef3] p-3 h-32 focus:ring-2 focus:ring-[#2c90e2]" required></textarea>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-[#0e151b] text-sm font-medium mb-2">Loan Amount (£)</label>
+                                <input type="number" class="w-full rounded-xl border border-[#e8eef3] p-3 focus:ring-2 focus:ring-[#2c90e2]" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-[#0e151b] text-sm font-medium mb-2">Duration (months)</label>
+                                <input type="number" class="w-full rounded-xl border border-[#e8eef3] p-3 focus:ring-2 focus:ring-[#2c90e2]" required>
+                            </div>
+                        </div>
+
                         <div>
                             <label class="block text-[#0e151b] text-sm font-medium mb-2">Category</label>
-                            <select class="w-full rounded-xl border-[#e8eef3] p-3">
-                                <option>Select a category</option>
-                                <option>Small Business</option>
+                            <select class="w-full rounded-xl border border-[#e8eef3] p-3 focus:ring-2 focus:ring-[#2c90e2]">
                                 <option>Technology</option>
                                 <option>Social Good</option>
-                                <option>Education</option>
+                                <option>Small Business</option>
                                 <option>Healthcare</option>
+                                <option>Education</option>
                             </select>
                         </div>
-                        
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-[#0e151b] text-sm font-medium mb-2">Loan Amount</label>
-                                <input type="number" class="w-full rounded-xl border-[#e8eef3] p-3" placeholder="Amount in USD"/>
-                            </div>
-                            <div>
-                                <label class="block text-[#0e151b] text-sm font-medium mb-2">Duration</label>
-                                <select class="w-full rounded-xl border-[#e8eef3] p-3">
-                                    <option>Select loan duration</option>
-                                    <option>3 months</option>
-                                    <option>6 months</option>
-                                    <option>12 months</option>
-                                    <option>24 months</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-[#0e151b] text-sm font-medium mb-2">Your Story</label>
-                            <textarea class="w-full rounded-xl border-[#e8eef3] p-3 h-32" placeholder="Tell potential lenders about your project or needs..."></textarea>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-[#0e151b] text-sm font-medium mb-2">Upload Images</label>
-                            <div class="border-2 border-dashed border-[#e8eef3] rounded-xl p-8 text-center">
-                                <p class="text-[#507695]">Drag and drop images here, or click to upload</p>
-                            </div>
-                        </div>
+
+                        <button type="submit" class="w-full bg-[#2c90e2] text-white rounded-xl py-3 font-bold hover:bg-[#2570b3] transition-colors">
+                            Create Listing
+                        </button>
                     </form>
                 </div>
 
-                <h2 class="text-[#0e151b] text-xl font-bold mb-6">Example Listings for Inspiration</h2>
-                
-                <div class="space-y-6">
-                    <div class="flex items-stretch justify-between gap-4 bg-white rounded-xl p-6">
-                        <div class="flex flex-col gap-2 flex-[2_2_0px]">
-                            <p class="text-[#0e151b] text-lg font-bold leading-tight">Raising money for a new business</p>
-                            <p class="text-[#507695] text-sm font-normal leading-normal">
-                                I am a small business owner, and I am looking to raise money to expand my business. I will use the money to hire more employees, open a second location, and invest in marketing.
-                            </p>
-                        </div>
-                        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1" style="background-image: url('/api/placeholder/400/300');"></div>
-                    </div>
+                <div class="mb-8">
+                    <h2 class="text-[#0e151b] text-2xl font-bold mb-4">Example Listings</h2>
+                    <p class="text-[#507695] text-base mb-6">Get inspired by other borrowers in the community</p>
                     
-                    <div class="flex items-stretch justify-between gap-4 bg-white rounded-xl p-6">
-                        <div class="flex flex-col gap-2 flex-[2_2_0px]">
-                            <p class="text-[#0e151b] text-lg font-bold leading-tight">Supporting a family member's medical expenses</p>
-                            <p class="text-[#507695] text-sm font-normal leading-normal">
-                                My brother was recently diagnosed with cancer, and he is struggling to cover his medical expenses. I want to raise money to help him pay for his treatment, as well as his living expenses while he is unable to work.
-                            </p>
+                    <div class="space-y-6">
+                        <div class="flex items-stretch justify-between gap-4 bg-white rounded-xl p-6">
+                            <div class="flex flex-col gap-2 flex-[2_2_0px]">
+                                <p class="text-[#0e151b] text-lg font-bold leading-tight">Raising money for a new business</p>
+                                <p class="text-[#507695] text-sm font-normal leading-normal">
+                                    I am a small business owner, and I am looking to raise money to expand my business. I will use the money to hire more employees, open a second location, and invest in marketing.
+                                </p>
+                            </div>
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1" style="background-image: url('https://cdn.usegalileo.ai/stability/dac33886-1b3d-4ccb-9189-56f12c51074e.png');"></div>
                         </div>
-                        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1" style="background-image: url('/api/placeholder/400/300');"></div>
-                    </div>
-                    
-                    <div class="flex items-stretch justify-between gap-4 bg-white rounded-xl p-6">
-                        <div class="flex flex-col gap-2 flex-[2_2_0px]">
-                            <p class="text-[#0e151b] text-lg font-bold leading-tight">Funding a documentary about climate change</p>
-                            <p class="text-[#507695] text-sm font-normal leading-normal">
-                                I am a filmmaker, and I am passionate about raising awareness of climate change. I want to create a documentary that explores the impact of global warming on communities around the world. I need funding to cover the cost of production and distribution.
-                            </p>
+
+                        <div class="flex items-stretch justify-between gap-4 bg-white rounded-xl p-6">
+                            <div class="flex flex-col gap-2 flex-[2_2_0px]">
+                                <p class="text-[#0e151b] text-lg font-bold leading-tight">Supporting a family member's medical expenses</p>
+                                <p class="text-[#507695] text-sm font-normal leading-normal">
+                                    My brother was recently diagnosed with cancer, and he is struggling to cover his medical expenses. I want to raise money to help him pay for his treatment, as well as his living expenses while he is unable to work.
+                                </p>
+                            </div>
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1" style="background-image: url('https://cdn.usegalileo.ai/stability/bb337c8f-c61c-4e61-8de7-ade100bce502.png');"></div>
                         </div>
-                        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1" style="background-image: url('/api/placeholder/400/300');"></div>
                     </div>
                 </div>
             </div>
         </main>
-        
+
         <footer class="bg-[#0e151b] text-white py-8">
             <div class="max-w-[960px] mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
