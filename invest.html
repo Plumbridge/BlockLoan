@@ -3,36 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlockLoan - Invest</title>
+    <title>BlockLoan - The Future of Finance</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
-    />
+    <link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans:wght@400;500;700;900" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
-        body {
-            font-family: "Work Sans", "Noto Sans", sans-serif;
-        }
-        .mobile-menu-button { display: none; }
-        @media (max-width: 768px) {
-            .hidden.md\:flex { display: none; }
-            .mobile-menu-button { display: block; }
-            .mobile-menu { display: none; }
-            .mobile-menu.open { display: block; }
-        }
+        body { font-family: "Work Sans", "Noto Sans", sans-serif; }
     </style>
-    <script>
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('open');
-        }
-    </script>
 </head>
 <body class="bg-[#f8fafb]">
     <div class="relative flex min-h-screen flex-col">
-        <!-- Header -->
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8eef3] px-4 md:px-10 py-3">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8eef3] px-10 py-3">
             <div class="flex items-center gap-4 text-[#0e151b]">
                 <div class="size-4">
                     <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,15 +22,10 @@
                 </div>
                 <h2 class="text-[#0e151b] text-lg font-bold leading-tight tracking-[-0.015em]">BlockLoan</h2>
             </div>
-            <button class="mobile-menu-button md:hidden" onclick="toggleMobileMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5M3.75 12h16.5m-16.5 6.75h16.5" />
-                </svg>
-            </button>
-            <div class="flex flex-1 justify-end gap-4 md:gap-8">
-                <div id="mobile-menu" class="mobile-menu md:flex items-center gap-4 md:gap-9">
+            <div class="flex flex-1 justify-end gap-8">
+                <div class="flex items-center gap-9">
                     <a class="text-[#0e151b] text-sm font-medium leading-normal" href="index.html">Home</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal font-bold" href="invest.html">Invest</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="invest.html">Invest</a>
                     <a class="text-[#0e151b] text-sm font-medium leading-normal" href="borrow.html">Borrow</a>
                     <a class="text-[#0e151b] text-sm font-medium leading-normal" href="overview.html">Overview</a>
                     <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Log In</a>
@@ -59,158 +35,92 @@
                 </button>
             </div>
         </header>
-
-        <!-- Filter Section (moved to top for mobile) -->
-        <div class="flex flex-wrap gap-4 justify-start px-4 py-4 border-b border-solid border-b-[#e8eef3] md:flex-row md:justify-start">
-            <button class="flex items-center gap-3 px-3 py-2 rounded-xl bg-[#e8eef3]">
-                <div class="text-[#0e161b]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path d="M192,72H152.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,24,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,151.12,214l11,7.33A16,16,0,0,0,186.5,212l11.77-44.36A48,48,0,0,0,192,72ZM171,207.89l0,.11-11-7.33V168h21.6ZM192,152H160V88h32a32,32,0,1,1,0,64Z"></path>
-                    </svg>
-                </div>
-                <p class="text-[#0e161b] text-sm font-medium leading-normal">Projects</p>
-            </button>
-            <button class="flex items-center gap-3 px-3 py-2 rounded-xl bg-[#e8eef3]">
-                <div class="text-[#0e161b]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM240,56H16a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H240a8,8,0,0,0,8-8V64A8,8,0,0,0,240,56ZM193.65,184H62.35A56.78,56.78,0,0,0,24,145.65v-35.3A56.78,56.78,0,0,0,62.35,72h131.3A56.78,56.78,0,0,0,232,110.35v35.3A56.78,56.78,0,0,0,193.65,184ZM232,93.37A40.81,40.81,0,0,1,210.63,72H232ZM45.37,72A40.81,40.81,0,0,1,24,93.37V72ZM24,162.63A40.81,40.81,0,0,1,45.37,184H24ZM210.63,184A40.81,40.81,0,0,1,232,162.63V184Z"></path>
-                    </svg>
-                </div>
-                <p class="text-[#0e161b] text-sm font-medium leading-normal">Loans</p>
-            </button>
-        </div>
-
-        <!-- Main Content -->
+        
         <main class="flex-1">
-            <div class="gap-1 px-6 flex flex-1 flex-col py-5">
-                <!-- Main Content Area -->
+            <div class="px-40 flex flex-1 justify-center py-5">
                 <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                    <div class="flex flex-wrap justify-between gap-3 p-4">
-                        <div class="flex min-w-72 flex-col gap-3">
-                            <p class="text-[#0e161b] tracking-light text-[32px] font-bold leading-tight">Explore projects</p>
-                            <p class="text-[#507a95] text-sm font-normal leading-normal">Invest in startups, real estate, and more</p>
+                    <!-- Hero Section -->
+                    <div class="@container">
+                        <div class="@[480px]:p-4">
+                            <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url('https://cdn.usegalileo.ai/sdxl10/91e2975f-dad2-42ee-b0a0-4a5c5b26d789.png');">
+                                <div class="flex flex-col gap-2 text-center">
+                                    <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                        The future of finance
+                                    </h1>
+                                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                        BlockLoan is a decentralised platform that connects borrowers and investors. We offer real-time open liquidity for a wide range of assets. Get started today.
+                                    </h2>
+                                </div>
+                                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                                    <span class="truncate">Get Started</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-
-                    <h2 class="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Projects</h2>
                     
-                    <!-- EcoCharge Project -->
-                    <div class="p-4">
-                        <div class="flex md:flex-row flex-col gap-4 rounded-xl bg-[#f8fafb] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                    <!-- How it works -->
+                    <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">How it works</h2>
+                    <p class="text-[#0e151b] text-base font-normal leading-normal pb-3 pt-1 px-4">We offer a wide range of financial services, all powered by blockchain technology.</p>
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#e8eef3] bg-[#FFFFFF] p-4 flex-col">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/af9e7ee3-6a6a-4fe8-87bf-d1ebc099b1cc.png');"></div>
                             <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2">
-                                    <div class="text-[#0e161b]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                        </svg>
-                                    </div>
-                                    <p class="text-[#507a95] text-sm font-normal leading-normal">Tech Startup</p>
-                                </div>
-                                <p class="text-[#0e161b] text-base font-bold leading-tight">EcoCharge - Solar Power Storage Solutions</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">2.3M raised</p>
+                                <h2 class="text-[#0e151b] text-base font-bold leading-tight">Lend</h2>
+                                <p class="text-[#507695] text-sm font-normal leading-normal">Earn interest by offering loans.</p>
                             </div>
-                            <button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#e8eef3] text-[#0e161b] text-sm font-medium leading-normal">
-                                <span class="truncate">Start Investing $1000</span>
-                            </button>
+                        </div>
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#e8eef3] bg-[#FFFFFF] p-4 flex-col">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/f2eb2a50-3038-44fb-8cfc-c9fb7d955ead.png');"></div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-[#0e151b] text-base font-bold leading-tight">Borrow</h2>
+                                <p class="text-[#507695] text-sm font-normal leading-normal">Gain access to willing investors.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#e8eef3] bg-[#FFFFFF] p-4 flex-col">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/92643dfc-235a-4c33-91f8-d02ac4b38fa7.png');"></div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-[#0e151b] text-base font-bold leading-tight">Manage</h2>
+                                <p class="text-[#507695] text-sm font-normal leading-normal">A clear view of your finances.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#e8eef3] bg-[#FFFFFF] p-4 flex-col">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/8a0861ae-1758-469f-a1e1-abb1810fcdad.png');"></div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-[#0e151b] text-base font-bold leading-tight">Projects</h2>
+                                <p class="text-[#507695] text-sm font-normal leading-normal">Invest in large projects.</p>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Urban Gardens Project -->
-                    <div class="p-4">
-                        <div class="flex md:flex-row flex-col gap-4 rounded-xl bg-[#f8fafb] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2">
-                                    <div class="text-[#0e161b]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18"/>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 21V7l7-4 7 4v14"/>
-                                        </svg>
-                                    </div>
-                                    <p class="text-[#507a95] text-sm font-normal leading-normal">Real Estate Development</p>
-                                </div>
-                                <p class="text-[#0e161b] text-base font-bold leading-tight">Urban Gardens Mixed-Use Complex</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">4.7M raised</p>
+                    
+                    <!-- Featured Section -->
+                    <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured</h2>
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/37a5cfbc-cd74-4c62-8454-1af42cdd3afe.png');"></div>
+                            <div>
+                                <p class="text-[#0e151b] text-base font-medium leading-normal">Access instant liquidity with BlockLoan</p>
+                                <p class="text-[#507695] text-sm font-normal leading-normal">Unlock easy access to loans.</p>
                             </div>
-                            <button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#e8eef3] text-[#0e161b] text-sm font-medium leading-normal">
-                                <span class="truncate">Start Investing $5000</span>
-                            </button>
                         </div>
-                    </div>
-
-                    <!-- Vertical Farming Project -->
-                    <div class="p-4">
-                        <div class="flex md:flex-row flex-col gap-4 rounded-xl bg-[#f8fafb] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2">
-                                    <div class="text-[#0e161b]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                                        </svg>
-                                    </div>
-                                    <p class="text-[#507a95] text-sm font-normal leading-normal">Sustainable Agriculture</p>
-                                </div>
-                                <p class="text-[#0e161b] text-base font-bold leading-tight">Vertical Farming Innovation Hub</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">1.8M raised</p>
+                        <div class="flex flex-col gap-3 pb-3">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/aa6a5f4a-2c95-4043-9ee5-7caed47c4aef.png');"></div>
+                            <div>
+                                <p class="text-[#0e151b] text-base font-medium leading-normal">Earn higher yields with BlockLoan</p>
+                                <p class="text-[#507695] text-sm font-normal leading-normal">Set the terms for your investments.</p>
                             </div>
-                            <button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#e8eef3] text-[#0e161b] text-sm font-medium leading-normal">
-                                <span class="truncate">Start Investing $2000</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- MediTrack Project -->
-                    <div class="p-4">
-                        <div class="flex md:flex-row flex-col gap-4 rounded-xl bg-[#f8fafb] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2">
-                                    <div class="text-[#0e161b]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                        </svg>
-                                    </div>
-                                    <p class="text-[#507a95] text-sm font-normal leading-normal">Healthcare Technology</p>
-                                </div>
-                                <p class="text-[#0e161b] text-base font-bold leading-tight">MediTrack AI Diagnostics Platform</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">3.1M raised</p>
-                            </div>
-                            <button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#e8eef3] text-[#0e161b] text-sm font-medium leading-normal">
-                                <span class="truncate">Start Investing $1500</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Ocean Wave Energy Project -->
-                    <div class="p-4">
-                        <div class="flex md:flex-row flex-col gap-4 rounded-xl bg-[#f8fafb] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex items-center gap-2">
-                                    <div class="text-[#0e161b]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                        </svg>
-                                    </div>
-                                    <p class="text-[#507a95] text-sm font-normal leading-normal">Renewable Energy</p>
-                                </div>
-                                <p class="text-[#0e161b] text-base font-bold leading-tight">Ocean Wave Energy Generator</p>
-                                <p class="text-[#507a95] text-sm font-normal leading-normal">2.8M raised</p>
-                            </div>
-                            <button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#e8eef3] text-[#0e161b] text-sm font-medium leading-normal">
-                                <span class="truncate">Start Investing $3000</span>
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-
+        
         <!-- Footer -->
-        <footer class="bg-[#0e151b] text-white py-8 mt-auto">
+        <footer class="bg-[#0e151b] text-white py-8">
             <div class="max-w-[960px] mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div>
                         <h3 class="text-lg font-bold mb-4">About BlockLoan</h3>
-                        <p class="text-sm">BlockLoan is a decentralized platform connecting borrowers and investors, offering low-cost, high-speed liquidity for a wide range of assets.</p>
+                        <p class="text-sm">BlockLoan is a decentralised platform connecting borrowers and investors, offering low-cost, high-speed liquidity for a wide range of assets.</p>
                     </div>
                     <div>
                         <h3 class="text-lg font-bold mb-4">Quick Links</h3>
