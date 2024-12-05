@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlockLoan - Loans</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
         body {
@@ -64,7 +64,7 @@
 
         <!-- Project Fund Section -->
         <div class="px-4 md:px-40 py-5">
-            <div class="flex flex-col md:flex-row md:justify-center gap-4 bg-[#f8fafb] p-4">
+            <div class="flex justify-center gap-4 bg-[#f8fafb] p-4">
                 <!-- Projects button -->
                 <a href="invest.html" class="flex items-center gap-3 px-3 py-2 md:w-auto">
                     <div class="text-[#0e161b]" data-icon="Megaphone" data-size="24px" data-weight="fill">
@@ -92,106 +92,123 @@
             <div class="px-4 md:px-40 flex flex-1 justify-center py-5">
                 <div class="layout-content-container flex flex-col md:flex-row gap-6 w-full max-w-[960px]">
                     <!-- Main Content Area -->
-                    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                        <div class="flex flex-wrap justify-between gap-3 p-4">
-                            <p class="text-[#0e161b] tracking-light text-[32px] font-bold leading-tight min-w-72">Community loans</p>
+                    <div class="flex-1">
+                        <div class="p-4">
+                            <div class="flex flex-col gap-3">
+                                <h2 class="text-[#0e161b] text-3xl font-bold">Explore projects</h2>
+                                <p class="text-[#507a95] text-sm">Invest in startups, real estate, and more</p>
+                            </div>
                         </div>
 
-                        <!-- Loan Cards -->
-                        <div class="flex flex-col divide-y divide-gray-100">
-                            <!-- College tuition loan -->
-                            <div class="flex gap-4 bg-white px-4 py-5 justify-between">
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex justify-between items-start">
-                                        <h3 class="text-[#0e161b] text-lg font-semibold">College tuition & expenses</h3>
-                                        <span class="text-xl font-bold text-[#2c90e2]">$2,000</span>
+                        <div class="p-4">
+                            <button class="flex items-center gap-2 rounded-xl bg-[#e8eef3] px-4 py-2">
+                                <span class="text-[#0e161b] text-sm font-medium">All</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="space-y-4 p-4">
+                            <!-- EcoCharge Project -->
+                            <div class="flex flex-col md:flex-row gap-4 rounded-xl bg-white p-4 shadow">
+                                <div class="flex flex-col gap-4 flex-1">
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                            </svg>
+                                            <span class="text-[#507a95] text-sm">Tech Startup</span>
+                                        </div>
+                                        <h3 class="text-[#0e161b] font-bold">EcoCharge - Solar Power Storage Solutions</h3>
+                                        <p class="text-[#507a95] text-sm">2.3M raised</p>
                                     </div>
-                                    <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
-                                        8% Interest Rate
-                                    </div>
-                                    <p class="text-[#507a95] text-base mt-1">
-                                        I'm a 23-year-old college student trying to make ends meet. I have a part-time job and I need help paying for my tuition, textbooks, and rent this semester.
-                                    </p>
-                                    <button class="flex items-center justify-center rounded-xl h-10 px-4 bg-[#2c90e2] text-white text-sm font-bold mt-3 hover:bg-[#2577b9] transition-colors w-fit">
-                                        Invest Now
+                                    <button class="bg-[#e8eef3] text-[#0e161b] px-4 py-2 rounded-xl text-sm w-fit">
+                                        Start Investing $1000
                                     </button>
                                 </div>
+                                <div class="w-full md:w-1/3 aspect-video rounded-xl bg-cover" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/b07bd82f-bc8f-4a82-9fda-749a7b3d0b07.png')"></div>
                             </div>
 
-                            <!-- Rent & groceries loan -->
-                            <div class="flex gap-4 bg-white px-4 py-5 justify-between">
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex justify-between items-start">
-                                        <h3 class="text-[#0e161b] text-lg font-semibold">Rent & groceries</h3>
-                                        <span class="text-xl font-bold text-[#2c90e2]">$1,500</span>
+                            <!-- Urban Gardens Project -->
+                            <div class="flex flex-col md:flex-row gap-4 rounded-xl bg-white p-4 shadow">
+                                <div class="flex flex-col gap-4 flex-1">
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l7-4 7 4v14" />
+                                            </svg>
+                                            <span class="text-[#507a95] text-sm">Real Estate Development</span>
+                                        </div>
+                                        <h3 class="text-[#0e161b] font-bold">Urban Gardens Mixed-Use Complex</h3>
+                                        <p class="text-[#507a95] text-sm">4.7M raised</p>
                                     </div>
-                                    <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
-                                        7% Interest Rate
-                                    </div>
-                                    <p class="text-[#507a95] text-base mt-1">
-                                        I lost my job due to the COVID-19 pandemic and I'm struggling to pay my bills and feed my family. I'm looking for help to cover my rent and groceries for the next two months.
-                                    </p>
-                                    <button class="flex items-center justify-center rounded-xl h-10 px-4 bg-[#2c90e2] text-white text-sm font-bold mt-3 hover:bg-[#2577b9] transition-colors w-fit">
-                                        Invest Now
+                                    <button class="bg-[#e8eef3] text-[#0e161b] px-4 py-2 rounded-xl text-sm w-fit">
+                                        Start Investing $5000
                                     </button>
                                 </div>
+                                <div class="w-full md:w-1/3 aspect-video rounded-xl bg-cover" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/cab09e3e-2c02-476c-b9f7-88a44a3c1b11.png')"></div>
                             </div>
 
-                            <!-- Small business support loan -->
-                            <div class="flex gap-4 bg-white px-4 py-5 justify-between">
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex justify-between items-start">
-                                        <h3 class="text-[#0e161b] text-lg font-semibold">Small business support</h3>
-                                        <span class="text-xl font-bold text-[#2c90e2]">$3,500</span>
+                            <!-- Vertical Farming Project -->
+                            <div class="flex flex-col md:flex-row gap-4 rounded-xl bg-white p-4 shadow">
+                                <div class="flex flex-col gap-4 flex-1">
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                            </svg>
+                                            <span class="text-[#507a95] text-sm">Sustainable Agriculture</span>
+                                        </div>
+                                        <h3 class="text-[#0e161b] font-bold">Vertical Farming Innovation Hub</h3>
+                                        <p class="text-[#507a95] text-sm">1.8M raised</p>
                                     </div>
-                                    <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
-                                        9% Interest Rate
-                                    </div>
-                                    <p class="text-[#507a95] text-base mt-1">
-                                        I'm a small business owner who's been impacted by the pandemic. I need some extra capital to keep my business running while I wait for my PPP loan to be approved.
-                                    </p>
-                                    <button class="flex items-center justify-center rounded-xl h-10 px-4 bg-[#2c90e2] text-white text-sm font-bold mt-3 hover:bg-[#2577b9] transition-colors w-fit">
-                                        Invest Now
+                                    <button class="bg-[#e8eef3] text-[#0e161b] px-4 py-2 rounded-xl text-sm w-fit">
+                                        Start Investing $2000
                                     </button>
                                 </div>
+                                <div class="w-full md:w-1/3 aspect-video rounded-xl bg-cover" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/b3c8b4d5-39dd-4f3a-8176-74004a925d58.png')"></div>
                             </div>
 
-                            <!-- Car repair loan -->
-                            <div class="flex gap-4 bg-white px-4 py-5 justify-between">
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex justify-between items-start">
-                                        <h3 class="text-[#0e161b] text-lg font-semibold">Car repair & maintenance</h3>
-                                        <span class="text-xl font-bold text-[#2c90e2]">$800</span>
+                            <!-- MediTrack Project -->
+                            <div class="flex flex-col md:flex-row gap-4 rounded-xl bg-white p-4 shadow">
+                                <div class="flex flex-col gap-4 flex-1">
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                            <span class="text-[#507a95] text-sm">Healthcare Technology</span>
+                                        </div>
+                                        <h3 class="text-[#0e161b] font-bold">MediTrack AI Diagnostics Platform</h3>
+                                        <p class="text-[#507a95] text-sm">3.1M raised</p>
                                     </div>
-                                    <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
-                                        6% Interest Rate
-                                    </div>
-                                    <p class="text-[#507a95] text-base mt-1">
-                                        I'm a 35-year-old single mom who's struggling to make ends meet. I need help paying for my car repairs so I can continue to get to work and take my kids to school.
-                                    </p>
-                                    <button class="flex items-center justify-center rounded-xl h-10 px-4 bg-[#2c90e2] text-white text-sm font-bold mt-3 hover:bg-[#2577b9] transition-colors w-fit">
-                                        Invest Now
+                                    <button class="bg-[#e8eef3] text-[#0e161b] px-4 py-2 rounded-xl text-sm w-fit">
+                                        Start Investing $1500
                                     </button>
                                 </div>
+                                <div class="w-full md:w-1/3 aspect-video rounded-xl bg-cover" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/4d319512-ac04-465f-a126-8ee83032e8a7.png')"></div>
                             </div>
 
-                            <!-- Creative project loan -->
-                            <div class="flex gap-4 bg-white px-4 py-5 justify-between">
-                                <div class="flex flex-col gap-2 flex-1">
-                                    <div class="flex justify-between items-start">
-                                        <h3 class="text-[#0e161b] text-lg font-semibold">Creative project funding</h3>
-                                        <span class="text-xl font-bold text-[#2c90e2]">$1,200</span>
+                            <!-- Ocean Wave Energy Project -->
+                            <div class="flex flex-col md:flex-row gap-4 rounded-xl bg-white p-4 shadow">
+                                <div class="flex flex-col gap-4 flex-1">
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <span class="text-[#507a95] text-sm">Renewable Energy</span>
+                                        </div>
+                                        <h3 class="text-[#0e161b] font-bold">Ocean Wave Energy Generator</h3>
+                                        <p class="text-[#507a95] text-sm">2.8M raised</p>
                                     </div>
-                                    <div class="inline-flex px-3 py-1 bg-[#e8eef3] text-[#2c90e2] font-semibold rounded-full text-sm w-fit">
-                                        10% Interest Rate
-                                    </div>
-                                    <p class="text-[#507a95] text-base mt-1">
-                                        I'm a 28-year-old freelance designer who's looking for some extra cash to fund my new project. I need help covering the costs of software, hosting, and marketing.
-                                    </p>
-                                    <button class="flex items-center justify-center rounded-xl h-10 px-4 bg-[#2c90e2] text-white text-sm font-bold mt-3 hover:bg-[#2577b9] transition-colors w-fit">
-                                        Invest Now
+                                    <button class="bg-[#e8eef3] text-[#0e161b] px-4 py-2 rounded-xl text-sm w-fit">
+                                        Start Investing $3000
                                     </button>
                                 </div>
+                                <div class="w-full md:w-1/3 aspect-video rounded-xl bg-cover" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/6551823d-6a6d-492a-bfad-f368a85258dc.png')"></div>
                             </div>
                         </div>
                     </div>
