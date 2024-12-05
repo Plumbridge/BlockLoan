@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlockLoan - Overview</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
@@ -32,33 +32,56 @@
                 }
             });
         }
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
     </script>
 </head>
 <body class="bg-[#f8fafb]">
     <div class="relative flex min-h-screen flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e8eef3] px-10 py-3">
-            <div class="flex items-center gap-4 text-[#0e151b]">
-                <div class="size-4">
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
-                    </svg>
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-[#e8eef3]">
+            <div class="flex items-center justify-between px-4 py-3 md:px-10">
+                <div class="flex items-center gap-2">
+                    <div class="size-4">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-[#0e151b] text-lg font-bold">BlockLoan</h2>
                 </div>
-                <h2 class="text-[#0e151b] text-lg font-bold leading-tight tracking-[-0.015em]">BlockLoan</h2>
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex items-center gap-4">
+                    <a class="text-[#0e151b] text-sm font-medium" href="index.html">Home</a>
+                    <a class="text-[#0e151b] text-sm font-medium" href="invest.html">Invest</a>
+                    <a class="text-[#0e151b] text-sm font-medium" href="borrow.html">Borrow</a>
+                    <a class="text-[#0e151b] text-sm font-medium font-bold" href="overview.html">Overview</a>
+                    <a class="text-[#0e151b] text-sm font-medium" href="#">Log In</a>
+                    <button class="bg-[#2c90e2] text-white px-4 py-2 rounded-xl">Get Started</button>
+                </div>
             </div>
-            <div class="flex flex-1 justify-end gap-8">
-                <div class="flex items-center gap-9">
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="index.html">Home</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="invest.html">Invest</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="borrow.html">Borrow</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal font-bold" href="overview.html">Overview</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Log In</a>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-[#e8eef3]">
+                <a href="index.html" class="block px-4 py-2 text-sm hover:bg-gray-50">Home</a>
+                <a href="invest.html" class="block px-4 py-2 text-sm hover:bg-gray-50">Invest</a>
+                <a href="borrow.html" class="block px-4 py-2 text-sm hover:bg-gray-50">Borrow</a>
+                <a href="overview.html" class="block px-4 py-2 text-sm hover:bg-gray-50 font-bold">Overview</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-50">Log In</a>
+                <div class="p-4">
+                    <button class="w-full bg-[#2c90e2] text-white px-4 py-2 rounded-xl">Get Started</button>
                 </div>
-                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
-                    <span class="truncate">Get Started</span>
-                </button>
             </div>
         </header>
-        
+        <div class="h-16"></div>
+
+        <!-- Main Content -->
         <main class="flex-1">
             <div class="px-4 md:px-40 py-5 max-w-[960px] mx-auto">
                 <div class="flex flex-wrap justify-between gap-3 p-4">
@@ -68,7 +91,7 @@
                     </div>
                 </div>
                 <div class="pb-3">
-                    <div class="flex border-b border-[#d1dde6] px-4 gap-8">
+                    <div class="flex border-b border-[#d1dde6] px-4 gap-4 overflow-x-auto">
                         <a id="all-tab" class="flex flex-col items-center justify-center border-b-[3px] border-b-[#2c90e2] text-[#0e151b] pb-[13px] pt-4" href="#" onclick="showTab('all')">
                             <p class="text-sm font-bold leading-normal tracking-[0.015em]">All</p>
                         </a>
@@ -84,28 +107,28 @@
                 <!-- All Tab Content -->
                 <div id="all-content">
                     <div class="flex flex-wrap gap-3 px-4 py-3">
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                        <div class="flex min-w-[111px] flex-1 flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
                             <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$1,234</p>
                             <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Total loans</p></div>
                         </div>
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                        <div class="flex min-w-[111px] flex-1 flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
                             <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$5,678</p>
                             <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Active loans</p></div>
                         </div>
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                        <div class="flex min-w-[111px] flex-1 flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
                             <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$9,012</p>
                             <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Total investments</p></div>
                         </div>
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                        <div class="flex min-w-[111px] flex-1 flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
                             <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$3,456</p>
                             <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Active investments</p></div>
                         </div>
                     </div>
 
                     <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Active Investments</h2>
-                    <div class="px-4 py-3 @container">
-                        <div class="flex overflow-hidden rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
-                            <table class="flex-1 w-full">
+                    <div class="px-4 py-3">
+                        <div class="flex overflow-x-auto rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
+                            <table class="w-full min-w-[600px]">
                                 <thead>
                                     <tr class="bg-[#f8fafb]">
                                         <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Borrower</th>
@@ -157,9 +180,9 @@
                     </div>
                     
                     <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Active Loans</h2>
-                    <div class="px-4 py-3 @container">
-                        <div class="flex overflow-hidden rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
-                            <table class="flex-1 w-full">
+                    <div class="px-4 py-3">
+                        <div class="flex overflow-x-auto rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
+                            <table class="w-full min-w-[600px]">
                                 <thead>
                                     <tr class="bg-[#f8fafb]">
                                         <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Borrower</th>
@@ -214,20 +237,20 @@
                 <!-- Investments Tab Content -->
                 <div id="investments-content" class="hidden">
                     <div class="flex flex-wrap gap-3 px-4 py-3">
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                        <div class="flex min-w-[111px] flex-1 flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
                             <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$9,012</p>
                             <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Total investments</p></div>
                         </div>
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                        <div class="flex min-w-[111px] flex-1 flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
                             <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$3,456</p>
                             <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Active investments</p></div>
                         </div>
                     </div>
                     
                     <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Active Investments</h2>
-                    <div class="px-4 py-3 @container">
-                        <div class="flex overflow-hidden rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
-                            <table class="flex-1 w-full">
+                    <div class="px-4 py-3">
+                        <div class="flex overflow-x-auto rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
+                            <table class="w-full min-w-[600px]">
                                 <thead>
                                     <tr class="bg-[#f8fafb]">
                                         <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Borrower</th>
@@ -282,20 +305,20 @@
                 <!-- Loans Tab Content -->
                 <div id="loans-content" class="hidden">
                     <div class="flex flex-wrap gap-3 px-4 py-3">
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                        <div class="flex min-w-[111px] flex-1 flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
                             <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$1,234</p>
                             <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Total loans</p></div>
                         </div>
-                        <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
+                        <div class="flex min-w-[111px] flex-1 flex-col gap-2 rounded-lg border border-[#d1dde6] p-3 items-start">
                             <p class="text-[#0e151b] tracking-light text-2xl font-bold leading-tight">$5,678</p>
                             <div class="flex items-center gap-2"><p class="text-[#507695] text-sm font-normal leading-normal">Active loans</p></div>
                         </div>
                     </div>
                     
                     <h2 class="text-[#0e151b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Active Loans</h2>
-                    <div class="px-4 py-3 @container">
-                        <div class="flex overflow-hidden rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
-                            <table class="flex-1 w-full">
+                    <div class="px-4 py-3">
+                        <div class="flex overflow-x-auto rounded-xl border border-[#d1dde6] bg-[#f8fafb]">
+                            <table class="w-full min-w-[600px]">
                                 <thead>
                                     <tr class="bg-[#f8fafb]">
                                         <th class="px-4 py-3 text-left text-[#0e151b] text-sm font-medium leading-normal">Borrower</th>
