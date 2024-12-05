@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlockLoan - The Future of Finance</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans:wght@400;500;700;900" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
-        body { font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif; }
+        body { font-family: "Work Sans", "Noto Sans", sans-serif; }
     </style>
 </head>
 <body class="bg-[#f8fafb]">
@@ -24,10 +24,10 @@
             </div>
             <div class="flex flex-1 justify-end gap-8">
                 <div class="flex items-center gap-9">
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal font-bold" href="#">Home</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Invest</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Borrow</a>
-                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Overview</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="index.html">Home</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="invest.html">Invest</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="borrow.html">Borrow</a>
+                    <a class="text-[#0e151b] text-sm font-medium leading-normal" href="overview.html">Overview</a>
                     <a class="text-[#0e151b] text-sm font-medium leading-normal" href="#">Log In</a>
                 </div>
                 <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#2c90e2] text-[#f8fafb] text-sm font-bold leading-normal tracking-[0.015em]">
@@ -115,13 +115,30 @@
         </main>
         
         <!-- Footer -->
-        <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-            <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a class="text-[#507695] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-                <a class="text-[#507695] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
-                <a class="text-[#507695] text-base font-normal leading-normal min-w-40" href="#">Contact Us</a>
+        <footer class="bg-[#0e151b] text-white py-8">
+            <div class="max-w-[960px] mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">About BlockLoan</h3>
+                        <p class="text-sm">BlockLoan is a decentralized platform connecting borrowers and investors, offering low-cost, high-speed liquidity for a wide range of assets.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                        <ul class="text-sm">
+                            <li class="mb-2"><a href="index.html" class="hover:text-[#2c90e2]">How It Works</a></li>
+                            <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">Invest</a></li>
+                            <li class="mb-2"><a href="borrow.html" class="hover:text-[#2c90e2]">Borrow</a></li>
+                            <li class="mb-2"><a href="overview.html" class="hover:text-[#2c90e2]">Overview</a></li>
+                            <li class="mb-2"><a href="#" class="hover:text-[#2c90e2]">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                        <p class="text-sm mb-2">Email: support@blockloan.com</p>
+                        <p class="text-sm">Phone: +44 7827439742</p>
+                    </div>
+                </div>
             </div>
-            <p class="text-[#507695] text-base font-normal leading-normal">© 2023 BlockLoan. All rights reserved.</p>
         </footer>
     </div>
 </body>
